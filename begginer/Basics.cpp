@@ -4,6 +4,61 @@
 
 // User defined function
 
+ //DATA TYPES,VARIABLES,ARITHMETIC OPERATORS, OPERATOR PRECEDENCE,EXPRESSIONS
+
+
+    //DATA TYPES AND VARIABLES
+    // Integer Data type: Which deals with integers, none decimal parts
+    // Floating point data type: Deals with decimal numbers
+
+void integrals(){
+
+    // Integral data type consist of: int,long, bool,unsigned char, unsigned int, unsigned long, unsigned short, unsigned bool
+    char x_1 = 20; // integers between -128 to 127, it has 1 byte
+    int x_2 = 1253647; // integers between -2147483648 to 2147483647 it has 4 byte
+    short x_3 = -32768; // integers betwenn -32768 to 32768 iy has 1 byte
+    bool x_4 = true ; // They are called logical values, (true or fals)
+
+    std::cout << x_1 << '\n';
+    std::cout << x_2 << '\n';
+    std::cout << x_3 << '\n';
+    std::cout << x_4 << '\n';
+    std::cout << " " << '\n';
+/*
+
+    sdt::cout << x_2 << '\n';
+    sdt::cout << x_2 << '\n';
+    sdt::cout << x_2 << '\n';
+*/
+}
+
+void floating_point(){
+
+    // Floating point data type consist of: float, double, and long double
+    float y_1 = 3.45144; //decimal numbers between -3.4*10^38 to 3.4*10^38
+    double  y_2 = 3.4514455; //decimal numbers between -3.4*10^308 to 3.4*10^308
+
+    std::cout << y_1 << '\n';
+    std::cout << y_2 << '\n';
+
+}
+
+//ARITHMETIC OPERATORS, OPERATOR PRECEDENCE,EXPRESSIONS
+
+// I'll skip arithmetic operators
+// Operation precidence: Use BODMAS rule to do calculations and not use a calculator, eg. long division
+
+void example_mod(){
+
+    //mode(modulus or remainder): Used to get remainder in odinary division (used on Integral data type)
+    //num_1 and num_2 are the operands
+
+    int num_1 = 73;
+    int num_2 = 9;
+    std::cout <<num_1%num_2;
+}
+
+
 void variables(){
  /* Two steps of creating a variable
         1.Declaration
@@ -309,15 +364,20 @@ void while_loop(){
 int main(){
 
 // variables();
-//  Namespace();
-//  Typedef();
-//  presidence();
-//  Tpye_conversion();
-//   input();
-//   hypot();
- //  statement_if();
-//statement_switch();
-while_loop();
+// Namespace();
+// Typedef();
+// presidence();
+// Tpye_conversion();
+// input();
+// hypot();
+// statement_if();
+// statement_switch();
+ while_loop();
+ integrals();
+ floating_point();
+ example_mod();
+
+ 
 
 
 
