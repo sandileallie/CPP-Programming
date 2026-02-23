@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 void practice(){
 
@@ -11,6 +12,32 @@ void practice(){
         break;
     }
 }
+
+void output(){
+    // Using the output operator/function
+
+    string igama;
+    string isbongo;
+    int umnyaka ;
+    double isisindvo ;
+
+
+    std::cout << "Faka igama lakho: " <<'\n';
+    std::cin >> igama;
+
+    std::cout << "Faka isbongo: " << '\n';
+    std::cin >> isbongo;
+
+    std::cout << "Faka umnyaka wakho: " << '\n';
+    std::cin >> umnyaka;
+
+    std::cout << "Faka isisindvo sakho: "
+
+
+}
+
+
+
 
 void example_1(){
 
@@ -30,10 +57,45 @@ task. The desired program is as follows:
 
 }
 
+
 int main(){
 
-    practice();
-    example_1();
+   // practice();
+   // example_1();
+
+   output();
 
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+  /*  string <idendify> = <"Variable";
+
+ cout << <identify>; */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
