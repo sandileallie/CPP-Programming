@@ -107,6 +107,86 @@ void lecture_3(){
 }
 
 
+void lecture_4(){
+
+    /*double z;
+    char c;
+    int a;
+
+
+    cin >> z >> c >> a;
+
+     cin >> z >> ch >> a; input is: 23.63C39
+    */
+
+     if ( M == Roman_numeral ){
+    cout << "The value of M is : " << M << '\n';
+ }
+
+ else if (M == Roman_numeral){
+    cout << "The value of D is : " <<  D << '\n';
+ }
+
+ else if (C == Roman_numeral){
+    cout << "The value of C is : " <<  C << '\n';
+ }
+
+ else if (L == Roman_numeral){
+    cout << "The value of L is : " <<  L << '\n';
+ }
+
+ else if (X == Roman_numeral){
+    cout << "The value of X is : " <<  X << '\n';
+ }
+
+ else if (V == Roman_numeral){
+    cout << "The value of V is : " <<  V << '\n';
+ }
+
+ else if (I == Roman_numeral){
+    cout << "The value of I is : " << I << '\n';
+ }
+
+ else{
+    cout << "You dont have a Roman numeral";
+ }
+
+
+
+
+
+ //Write a program to input a Roman numerals and convert into arabic numerals
+ /* Roman numerals:
+ M = 1000
+ D = 500
+ C = 100
+ L = 50
+ X = 10
+ V = 5
+ I = 1
+ */
+
+
+ int M = 1000;
+ int D = 500;
+ int C = 100;
+ int L = 50;
+ int X = 10;
+ int V = 5;
+ int I = 1;
+
+ char Roman_numeral;
+
+
+ cout << "Enter yor roman numeral: ";
+ cin >> Roman_numeral;
+
+ cin >> M,D,L,X,V,L;
+ cout << "The roman figure " << Roman_numeral << " is : " << M << '\n';
+
+}
+
+
 void revise(){
     //***************************************************************
     // Author: D.S. Malik
@@ -159,6 +239,39 @@ int main(){
 
 
   /*  string <idendify> = <"Variable";
+
+   const int M = 1000;
+ const int D = 500;
+ const int C = 100;
+ const int L = 50;
+ const int X = 10;
+ const int V = 5;
+ const int I = 1;
+
+
+int main()
+{
+
+ //Write a program to input a Roman numerals and convert into arabic numerals
+ /* Roman numerals:
+ M = 1000
+ D = 500
+ C = 100
+ L = 50
+ X = 10
+ V = 5
+ I = 1
+ */
+
+
+ char Roman_numeral;
+ char roman;
+
+ cout << "Enter yor roman numeral: ";
+ cin >> Roman_numeral;
+
+ cin >> roman;
+ cout << "The roman figure " << Roman_numeral << " is : " << roman << '\n';
 
  cout << <identify>; */
 
