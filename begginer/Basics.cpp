@@ -375,6 +375,20 @@ void find_value_array(){
 }
 
 
+void find_index_string(){
+
+    std::string Roman_numerals = "MDLCXVL";
+    int num[7] = {100,500,100,50,10,5,1};
+    char Find = 'X';
+
+    size_t FIND = Roman_numerals.find(Find); //This line helps us to find the index of the value we want from our string
+
+    std::cout << "The roman numeral " << Find << " is " << num[FIND] ;
+
+
+}
+
+
 
 
 
