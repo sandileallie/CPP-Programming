@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <algorithm>
 
 
 // User defined function
@@ -130,7 +131,7 @@ using number_u = int;
 void Typedef(){
     /*
     typedef = is a reserved keyword used to create an additional name (alias) for another data type.
-              New identifier for an existing type helps with readability and reduces typos. 
+              New identifier for an existing type helps with readability and reduces typos.
               Use when ther is a clear benefit
               Replace with 'using' (work better with templates)
     */
@@ -170,7 +171,7 @@ void Tpye_conversion(){
     // Type conversion = convert a value of one data type to another.
     //                  Implicity = automatic
     //                  Explicit = Precide value with new data type
-    
+
     double x = 3.5421;
 
     int y = 5.365;
@@ -197,7 +198,7 @@ void Tpye_conversion(){
 // accepting some user input in c++
 
 void input(){
-    
+
     // cout << (insertion operator)
     // cin >> (extraction operator)
 
@@ -285,7 +286,7 @@ void statement_if(){
 
  void statement_switch(){
     int month;
-    
+
     std::cout << "Enter the month(1-12): ";
     std::cin >> month;
 
@@ -351,7 +352,27 @@ void while_loop(){
 
 }
 
+void find_value_array(){
 
+    char roman_numeral[7] = {'M','D','L','C','X','V','L'};
+    int num[7] = {100,500,100,50,10,5,1};
+    char found = 'L';
+
+    // auto <idendifier_value_you_want> = find( begin(<name_array>) , end(<name_array>), <name_value_you_want> );
+    // find function will iterate trough the array from the beginning till it find the value you are looking for "begin(<name_array>)"
+    // but if it does not find the value it will give you the value/address after the end value "end(<name_array>)"
+
+    auto found_address = std::find(std::begin(roman_numeral),std::end(roman_numeral), found); //This line will give you the address of 'found'/ 'found_address is the iterator
+
+    // int <name_index> = <idendifier_value_you_want> - begin(<name_array>);
+    // This is pointer arithmetic: subtracting two addresses to find the index
+
+    int index = found_address - std::begin(roman_numeral); //This line will subtract the address of the value we wanted 'found' with the address of the first value
+
+    std::cout << "The value of roman figure " << found << " is :" << num[index];
+
+
+}
 
 
 
@@ -372,12 +393,13 @@ int main(){
 // hypot();
 // statement_if();
 // statement_switch();
- while_loop();
- integrals();
- floating_point();
- example_mod();
+//while_loop();
+//integrals();
+//floating_point();
+//example_mod();
+find_value_array();
 
- 
+
 
 
 

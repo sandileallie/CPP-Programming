@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
-#incluse <cmath>
+#include <cmath>
+#include <algorithm>
 
 void practice(){
 
@@ -17,8 +18,8 @@ void practice(){
 void output(){
     // Using the output operator/function
 
-    string igama;
-    string isbongo;
+    std::string igama;
+    std::string isbongo;
     int umnyaka ;
     double isisindvo ;
 
@@ -32,7 +33,7 @@ void output(){
     std::cout << "Faka umnyaka wakho: " << '\n';
     std::cin >> umnyaka;
 
-    std::cout << "Faka isisindvo sakho: "
+    std::cout << "Faka isisindvo sakho: ";
 
 
 }
@@ -82,7 +83,7 @@ void class_exc(){
     std::cout << "The value of u is : "
          << u << '\n';
 
-    string name = "Sandile mashaba";
+    std::string name = "Sandile mashaba";
     std::cout << "The lengt of string name = :" << name.length() << '\n';
 
 }
@@ -93,16 +94,16 @@ void lecture_3(){
     int x =25;
     int y = 33;
 
-    std::cout << x / y << endl;
-    std::cout << "Hello there." << endl;
-    std::cout << 12 << endl;
-    std::cout << "x + y" << endl;
-    std::cout << 4 + 7 << endl;
-    std::cout << 'A' << endl;
-    std::cout << "x + y = " << 4 + 7 << endl;
-    std::cout << 2 + 3 * 5 << endl;
-    std::cout << "Hello \nthere." << endl;
-    std::cout << "Hello world!" << endl;
+    std::cout << x / y << '\n';
+    std::cout << "Hello there." << '\n';
+    std::cout << 12 << '\n';
+    std::cout << "x + y" << '\n';
+    std::cout << 4 + 7 << '\n';
+    std::cout << 'A' << '\n';
+    std::cout << "x + y = " << 4 + 7 << '\n';
+    std::cout << 2 + 3 * 5 << '\n';
+    std::cout << "Hello \nthere." << '\n';
+    std::cout << "Hello world!" << '\n';
 
 }
 
@@ -119,7 +120,16 @@ void lecture_4(){
      cin >> z >> ch >> a; input is: 23.63C39
     */
 
-     if ( M == Roman_numeral ){
+/*
+ const int M = 1000;
+ const int D = 500;
+ const int C = 100;
+ const int L = 50;
+ const int X = 10;
+ const int V = 5;
+ const int I = 1;
+
+if ( M == Roman_numeral ){
     cout << "The value of M is : " << M << '\n';
  }
 
@@ -151,7 +161,38 @@ void lecture_4(){
     cout << "You dont have a Roman numeral";
  }
 
+*/
 
+
+/*
+ Write a program to input a Roman numerals and convert into arabic numerals
+ Roman numerals:
+ M = 1000
+ D = 500
+ C = 100
+ L = 50
+ X = 10
+ V = 5
+ I = 1
+
+
+ const int M = 1000;
+ const int D = 500;
+ const int C = 100;
+ const int L = 50;
+ const int X = 10;
+ const int V = 5;
+ const int I = 1;
+
+
+ char Roman_numeral;
+ char roman;
+
+ cout << "Enter yor roman numeral: ";
+ cin >> Roman_numeral;
+
+ cin >> roman;
+ cout << "The roman figure " << Roman_numeral << " is : " << roman << '\n';
 
 
 
@@ -166,7 +207,7 @@ void lecture_4(){
  I = 1
  */
 
-
+/*
  int M = 1000;
  int D = 500;
  int C = 100;
@@ -184,6 +225,23 @@ void lecture_4(){
  cin >> M,D,L,X,V,L;
  cout << "The roman figure " << Roman_numeral << " is : " << M << '\n';
 
+ */
+
+}
+
+
+void Roman_numeral(){
+
+    char roman_numeral[7] = {'M','D','L','C','X','V','L'};
+    int num[7] = {100,500,100,50,10,5,1};
+    char found = 'L';
+
+    auto in = std::find(std::begin(roman_numeral), std::end(roman_numeral), found);
+
+    int index = in - std::begin(roman_numeral);
+
+    std::cout << num[index] ;
+
 }
 
 
@@ -195,7 +253,7 @@ void revise(){
     // statement, named constants, variable declarations, assignment
     // statements, and input and output statements typically appear.
     //***************************************************************
-
+    const int number = 5;
     int firstnum ;
     int secondnum ;
 
@@ -222,58 +280,11 @@ int main(){
 
    // practice();
    // example_1();
-
-   output();
-
+   //output();
+    Roman_numeral();
     return 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-  /*  string <idendify> = <"Variable";
-
-   const int M = 1000;
- const int D = 500;
- const int C = 100;
- const int L = 50;
- const int X = 10;
- const int V = 5;
- const int I = 1;
-
-
-int main()
-{
-
- //Write a program to input a Roman numerals and convert into arabic numerals
- /* Roman numerals:
- M = 1000
- D = 500
- C = 100
- L = 50
- X = 10
- V = 5
- I = 1
- */
-
-
- char Roman_numeral;
- char roman;
-
- cout << "Enter yor roman numeral: ";
- cin >> Roman_numeral;
-
- cin >> roman;
- cout << "The roman figure " << Roman_numeral << " is : " << roman << '\n';
-
- cout << <identify>; */
 
 
 
