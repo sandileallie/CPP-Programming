@@ -275,6 +275,32 @@ void revise(){
 
 }
 
+void lecture_5()
+{
+     int A = 10;
+    double B = 20;
+    int C = 30;
+    int D = 40;
+
+    /*int A , C, D;
+    double B; */
+
+    cout << "Enter 4 intergers : " << '\n';
+
+    cin >> A
+        >> B
+        >> C
+        >> D;
+
+    cout << "The numbers you have entered are : A= " << A << " B= " << B << " C = " << C << " D= " << D;
+
+
+    //second sample output: 23 235.59 22 98
+    // cin.clear();
+    // cin.ignore()
+    // getline(cin , Mystring)
+
+}
 
 int main(){
 
