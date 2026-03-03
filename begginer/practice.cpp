@@ -300,6 +300,26 @@ void lecture_5()
     // cin.ignore()
     // getline(cin , Mystring)
 
+
+
+    // the following program finds the absolute valeu of an integer
+
+    int number, temp;
+
+    cout << "Enter intergers : " << '\n';
+
+    cin >> number;
+    temp = number;
+
+    if (temp > 0){
+        cout << "The interger " << temp << " is a positive number" << 'ln';
+    }
+
+    else if (temp < 0){
+        int abs_number =  abs(temp);
+        cout << "The absolute value of " << temp << " is " << abs_number ;
+    }
+
 }
 
 int main(){
