@@ -370,6 +370,23 @@ void lecture_6(){
     }
 
 
+   //Comparing Two numbers and output the largest
+
+    int num_1 , num_2;
+    cout << "Enter num_1 and num_2 : " << '\n';
+    cin >> num_1
+        >> num_2;
+
+     cout << "The Two numbers you have entered are " << num_1 << " and " << num_2 << '\n';
+
+    if ( num_1 > num_2 ){
+        cout << "The largest number is  " << num_1  << '\n';
+    }
+
+    else if ( num_1 < num_2 ){
+        cout << "The largest number is " << num_2  << '\n';
+    }
+
 
 }
 
@@ -378,7 +395,11 @@ int main(){
    // practice();
    // example_1();
    //output();
-    Roman_numeral();
+   // Roman_numeral();
+   //lecture_3();
+   //lecture_4();
+   //lecture_5();
+   lecture_6();
     return 0;
 }
 
