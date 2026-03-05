@@ -322,6 +322,57 @@ void lecture_5()
 
 }
 
+void lecture_6(){
+
+    //Calculating extra time Wages
+
+   double hours, rate, wages ;
+
+   cout << "Enter your hours: " << '\n';
+   cout << fixed << showpoint << setprecision (2);
+   cin >> hours
+       >> rate;
+
+   if (hours > 40){
+    wages = 40.0 * rate + 1.5* rate * (hours - 40.0);
+    cout << "Your wages including extra hours for this month is : " << wages << '\n';
+   }
+
+   else{
+    wages = hours * rate;
+    cout << "Your wages for this month is R: " << wages ;
+   }
+
+
+    //Calculating Tstudent grades
+
+    double grade;
+    cout << "Enter grade : " << '\n';
+    cin >> grade ;
+
+    if ( grade > 90){
+        cout << "Your grade is a A : " << grade << '\n';
+    }
+    else if ( grade > 80){
+        cout << "Your grade is a B  : " << grade << '\n';
+    }
+
+     else if ( grade > 70){
+        cout << "Your grade is a C : " << grade << '\n';
+    }
+
+     else if ( grade > 60){
+        cout << "Your grade is a D : " << grade << '\n';
+    }
+
+     else if ( grade < 50){
+        cout << "Your grade is a F : " << grade << '\n';
+    }
+
+
+
+}
+
 int main(){
 
    // practice();
