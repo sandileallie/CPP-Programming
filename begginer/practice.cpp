@@ -563,7 +563,13 @@ void ascending_order_lecture_7(){
     }
 
     else if ( num1 < num2 && num2 > num3){
-        cout << num3 << " " << num1 << " " << num2;
+            if (num3 < num1){
+                cout << num1 << " " << num3 << " " << num2;
+            }
+            else if (num3 > num1){
+                cout << num1 << " " << num3 << " " << num2;
+            }
+
     }
 
     else if ( num1 > num2 && num2 < num3){
