@@ -390,6 +390,64 @@ void lecture_6(){
 
 }
 
+void lecture_7(){
+
+    int num;
+    cout << "Enter a nuber from 0 to 10 : ";
+    cin >> num;
+
+    switch(num){
+case 0 :
+    cout << "The number " << num  << " is in range";
+    break;
+
+case 2 :
+    cout << "The number " << num  << " is in range";
+    break;
+
+case 3 :
+    cout << "The number " << num  << " is in range";
+    break;
+
+case 4 :
+    cout << "The number " << num  << " is in range";
+    break;
+
+case 5 :
+    cout << "The number " << num  << " is in range";
+    break;
+
+case 6 :
+    cout << "The number " << num  << " is in range";
+    break;
+
+case 7 :
+    cout << "The number " << num  << " is in range";
+    break;
+
+case 8 :
+    cout << "The number " << num  << " is in range";
+    break;
+
+case 9 :
+    cout << "The number " << num  << " is in range";
+    break;
+
+case 10 :
+    cout << "The number " << num  << " is in range";
+    break;
+
+default:
+    cout << "The number you have entered " << num << " is not in range";
+
+    }
+
+
+
+
+
+}
+
 int main(){
 
    // practice();
@@ -399,7 +457,8 @@ int main(){
    //lecture_3();
    //lecture_4();
    //lecture_5();
-   lecture_6();
+   //lecture_6();
+   lecture_7();
     return 0;
 }
 
