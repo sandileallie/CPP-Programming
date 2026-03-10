@@ -2,6 +2,9 @@
 #include <string>
 #include <cmath>
 #include <algorithm>
+#include <iomanip>
+
+
 
 void practice(){
 
@@ -285,14 +288,14 @@ void lecture_5()
     /*int A , C, D;
     double B; */
 
-    cout << "Enter 4 intergers : " << '\n';
+    std::cout << "Enter 4 intergers : " << '\n';
 
-    cin >> A
+    std::cin >> A
         >> B
         >> C
         >> D;
 
-    cout << "The numbers you have entered are : A= " << A << " B= " << B << " C = " << C << " D= " << D;
+    std::cout << "The numbers you have entered are : A= " << A << " B= " << B << " C = " << C << " D= " << D;
 
 
     //second sample output: 23 235.59 22 98
@@ -306,18 +309,18 @@ void lecture_5()
 
     int number, temp;
 
-    cout << "Enter intergers : " << '\n';
+    std::cout << "Enter intergers : " << '\n';
 
-    cin >> number;
+    std::cin >> number;
     temp = number;
 
     if (temp > 0){
-        cout << "The interger " << temp << " is a positive number" << 'ln';
+        std::cout << "The interger " << temp << " is a positive number" << 'ln';
     }
 
     else if (temp < 0){
         int abs_number =  abs(temp);
-        cout << "The absolute value of " << temp << " is " << abs_number ;
+        std::cout << "The absolute value of " << temp << " is " << abs_number ;
     }
 
 }
@@ -328,63 +331,63 @@ void lecture_6(){
 
    double hours, rate, wages ;
 
-   cout << "Enter your hours: " << '\n';
-   cout << fixed << showpoint << setprecision (2);
-   cin >> hours
+   std::cout << "Enter your hours: " << '\n';
+   //std::cout << fixed << showpoint << setprecision(2);
+   std::cin >> hours
        >> rate;
 
    if (hours > 40){
     wages = 40.0 * rate + 1.5* rate * (hours - 40.0);
-    cout << "Your wages including extra hours for this month is : " << wages << '\n';
+    std::cout << "Your wages including extra hours for this month is : " << wages << '\n';
    }
 
    else{
     wages = hours * rate;
-    cout << "Your wages for this month is R: " << wages ;
+    std::cout << "Your wages for this month is R: " << wages ;
    }
 
 
     //Calculating Tstudent grades
 
     double grade;
-    cout << "Enter grade : " << '\n';
-    cin >> grade ;
+    std::cout << "Enter grade : " << '\n';
+    std::cin >> grade ;
 
     if ( grade > 90){
-        cout << "Your grade is a A : " << grade << '\n';
+        std::cout << "Your grade is a A : " << grade << '\n';
     }
     else if ( grade > 80){
-        cout << "Your grade is a B  : " << grade << '\n';
+        std::cout << "Your grade is a B  : " << grade << '\n';
     }
 
      else if ( grade > 70){
-        cout << "Your grade is a C : " << grade << '\n';
+        std::cout << "Your grade is a C : " << grade << '\n';
     }
 
      else if ( grade > 60){
-        cout << "Your grade is a D : " << grade << '\n';
+        std::cout << "Your grade is a D : " << grade << '\n';
     }
 
      else if ( grade < 50){
-        cout << "Your grade is a F : " << grade << '\n';
+        std::cout << "Your grade is a F : " << grade << '\n';
     }
 
 
    //Comparing Two numbers and output the largest
 
     int num_1 , num_2;
-    cout << "Enter num_1 and num_2 : " << '\n';
-    cin >> num_1
+    std::cout << "Enter num_1 and num_2 : " << '\n';
+    std::cin >> num_1
         >> num_2;
 
-     cout << "The Two numbers you have entered are " << num_1 << " and " << num_2 << '\n';
+     std::cout << "The Two numbers you have entered are " << num_1 << " and " << num_2 << '\n';
 
     if ( num_1 > num_2 ){
-        cout << "The largest number is  " << num_1  << '\n';
+        std::cout << "The largest number is  " << num_1  << '\n';
     }
 
     else if ( num_1 < num_2 ){
-        cout << "The largest number is " << num_2  << '\n';
+        std::cout << "The largest number is " << num_2  << '\n';
     }
 
 
@@ -393,61 +396,61 @@ void lecture_6(){
 void lecture_7(){
 
     int num;
-    cout << "Enter a nuber from 0 to 10 : ";
-    cin >> num;
+    std::cout << "Enter a nuber from 0 to 10 : ";
+    std::cin >> num;
 
     switch(num){
 case 0 :
-    cout << "The number " << num  << " is in range";
+    std::cout << "The number " << num  << " is in range";
     break;
 
 case 2 :
-    cout << "The number " << num  << " is in range";
+    std::cout << "The number " << num  << " is in range";
     break;
 
 case 3 :
-    cout << "The number " << num  << " is in range";
+    std::cout << "The number " << num  << " is in range";
     break;
 
 case 4 :
-    cout << "The number " << num  << " is in range";
+    std::cout << "The number " << num  << " is in range";
     break;
 
 case 5 :
-    cout << "The number " << num  << " is in range";
+    std::cout << "The number " << num  << " is in range";
     break;
 
 case 6 :
-    cout << "The number " << num  << " is in range";
+    std::cout << "The number " << num  << " is in range";
     break;
 
 case 7 :
-    cout << "The number " << num  << " is in range";
+    std::cout << "The number " << num  << " is in range";
     break;
 
 case 8 :
-    cout << "The number " << num  << " is in range";
+    std::cout << "The number " << num  << " is in range";
     break;
 
 case 9 :
-    cout << "The number " << num  << " is in range";
+    std::cout << "The number " << num  << " is in range";
     break;
 
 case 10 :
-    cout << "The number " << num  << " is in range";
+    std::cout << "The number " << num  << " is in range";
     break;
 
 default:
-    cout << "The number you have entered " << num << " is not in range";
+    std::cout << "The number you have entered " << num << " is not in range";
 
     }
-
+}
 
 void lecture_7_1(){
 
     int score;
-    cout << "Enter a score : ";
-    cin >> score ;
+    std::cout << "Enter a score : ";
+    std::cin >> score ;
     char grade;
 
     switch(score / 10){
@@ -459,45 +462,47 @@ case 3:
 
 case 4 :
     grade = 'F';
-    cout << "grade : " << grade ;
+    std::cout << "grade : " << grade ;
     break;
 
 case 5 :
     grade = 'E';
-    cout << "grade : " << grade ;
+    std::cout << "grade : " << grade ;
     break;
 
 case 6 :
     grade = 'D';
-    cout << "grade : " << grade ;
+    std::cout << "grade : " << grade ;
     break;
 
 case 7 :
     grade = 'C';
-    cout << "grade : " << grade ;
+    std::cout << "grade : " << grade ;
     break;
 
 case 8 :
     grade = 'B';
-    cout << "grade : " << grade ;
+    std::cout << "grade : " << grade ;
     break;
 
 case 9 :
     grade = 'A';
-    cout << "grade : " << grade ;
+    std::cout << "grade : " << grade ;
     break;
 
 case 10 :
     grade = 'A';
-    cout << "grade : " << grade ;
+    std::cout << "grade : " << grade ;
     break;
 
 
 default:
-    cout << "The score you have entered is invalid ";
+    std::cout << "The score you have entered is invalid ";
     }
 
 }
+
+
 
 void gender_1_lecture_7(){
 
@@ -505,19 +510,19 @@ void gender_1_lecture_7(){
     // Write c++ statement that output Male if the gender is 'M', Female if the genger is 'F', and invalid gender otherwise
 
     char gender;
-    cout << "Enter your gender: M if you are Male and F if you are a Female " << '\n';
-    cin >> gender;
+    std::cout << "Enter your gender: M if you are Male and F if you are a Female " << '\n';
+    std::cin >> gender;
 
     if (gender == 'M'){
-        cout << "Male";
+        std::cout << "Male";
     }
 
     else if (gender == 'F'){
-        cout << "Female";
+        std::cout << "Female";
     }
 
     else {
-        cout << "invalid gender";
+        std::cout << "invalid gender";
     }
 
 
@@ -526,18 +531,18 @@ void gender_1_lecture_7(){
 void gender_2_lecture_7(){
 
     char gender;
-    cout << "Enter your gender: M if you are Male and F if you are a Female " << '\n';
-    cin >> gender;
+    std::cout << "Enter your gender: M if you are Male and F if you are a Female " << '\n';
+    std::cin >> gender;
 
     switch(gender){
     case 'M':
-        cout << "Male";
+        std::cout << "Male";
         break;
     case 'F':
-        cout << "Female";
+        std::cout << "Female";
         break;
     default:
-        cout << "invalid gender";
+        std::cout << "invalid gender";
 
     }
 
@@ -549,37 +554,42 @@ void ascending_order_lecture_7(){
     // Write a program that prompts you to input 3 numbers, the program should then output the numbers in asceding order
 
     int num1, num2, num3;
-    cout << "Enter 3 numbers :";
-    cin >> num1
+    std::cout << "Enter 3 numbers :";
+    std::cin >> num1
         >> num2
         >> num3;
 
     if( num1 > num2 && num2 > num3){
-        cout << num3 << " " << num2 << " " << num1;
+        std::cout << num3 << " " << num2 << " " << num1;
     }
 
     else if ( num1 < num2 && num2 < num3){
-        cout << num1 << " " << num2 << " " << num3;
+        std::cout << num1 << " " << num2 << " " << num3;
     }
 
     else if ( num1 < num2 && num2 > num3){
             if (num3 < num1){
-                cout << num1 << " " << num3 << " " << num2;
+                std::cout << num3 << " " << num1 << " " << num2;
             }
             else if (num3 > num1){
-                cout << num1 << " " << num3 << " " << num2;
+                std::cout << num1 << " " << num3 << " " << num2;
             }
 
     }
 
     else if ( num1 > num2 && num2 < num3){
-        cout << num1 << " " << num2 << " " << num3;
+            if (num3 < num1){
+                std::cout << num2 << " " << num3 << " " << num1;
+            }
+            else if (num3 > num1){
+                std::cout << num2 << " " << num1 << " " << num3;
+            }
     }
 
 }
 
 
-}
+
 
 int main(){
 
@@ -591,10 +601,11 @@ int main(){
    //lecture_4();
    //lecture_5();
    //lecture_6();
-   lecture_7();
-   gender_1_lecture_7()
-   gender_2_lecture_7()
-   ascending_order_lecture_7()
+   //lecture_7();
+   //lecture_7_1();
+   //gender_1_lecture_7()
+   //gender_2_lecture_7()
+   ascending_order_lecture_7();
     return 0;
 }
 

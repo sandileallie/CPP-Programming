@@ -388,6 +388,15 @@ void find_index_string(){
 
 }
 
+void for_loop(){
+
+    for(int i=0; i<5; i++){
+        for(int x=0; x<i; x++){
+        std::cout << x << " inner loop " ;
+        }
+        std::cout << i << " outer loop " << '\n' ;
+    }
+}
 
 
 
@@ -411,7 +420,8 @@ int main(){
 //integrals();
 //floating_point();
 //example_mod();
-find_value_array();
+//find_value_array();
+for_loop();
 
 
 
