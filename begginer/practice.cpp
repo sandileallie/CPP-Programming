@@ -443,7 +443,134 @@ default:
     }
 
 
+void lecture_7_1(){
 
+    int score;
+    cout << "Enter a score : ";
+    cin >> score ;
+    char grade;
+
+    switch(score / 10){
+
+case 0:
+case 1:
+case 2:
+case 3:
+
+case 4 :
+    grade = 'F';
+    cout << "grade : " << grade ;
+    break;
+
+case 5 :
+    grade = 'E';
+    cout << "grade : " << grade ;
+    break;
+
+case 6 :
+    grade = 'D';
+    cout << "grade : " << grade ;
+    break;
+
+case 7 :
+    grade = 'C';
+    cout << "grade : " << grade ;
+    break;
+
+case 8 :
+    grade = 'B';
+    cout << "grade : " << grade ;
+    break;
+
+case 9 :
+    grade = 'A';
+    cout << "grade : " << grade ;
+    break;
+
+case 10 :
+    grade = 'A';
+    cout << "grade : " << grade ;
+    break;
+
+
+default:
+    cout << "The score you have entered is invalid ";
+    }
+
+}
+
+void gender_1_lecture_7(){
+
+
+    // Write c++ statement that output Male if the gender is 'M', Female if the genger is 'F', and invalid gender otherwise
+
+    char gender;
+    cout << "Enter your gender: M if you are Male and F if you are a Female " << '\n';
+    cin >> gender;
+
+    if (gender == 'M'){
+        cout << "Male";
+    }
+
+    else if (gender == 'F'){
+        cout << "Female";
+    }
+
+    else {
+        cout << "invalid gender";
+    }
+
+
+}
+
+void gender_2_lecture_7(){
+
+    char gender;
+    cout << "Enter your gender: M if you are Male and F if you are a Female " << '\n';
+    cin >> gender;
+
+    switch(gender){
+    case 'M':
+        cout << "Male";
+        break;
+    case 'F':
+        cout << "Female";
+        break;
+    default:
+        cout << "invalid gender";
+
+    }
+
+
+}
+
+void ascending_order_lecture_7(){
+
+    // Write a program that prompts you to input 3 numbers, the program should then output the numbers in asceding order
+
+    int num1, num2, num3;
+    cout << "Enter 3 numbers :";
+    cin >> num1
+        >> num2
+        >> num3;
+
+    if( num1 > num2 && num2 > num3){
+        cout << num3 << " " << num2 << " " << num1;
+    }
+
+    else if ( num1 < num2 && num2 < num3){
+        cout << num1 << " " << num2 << " " << num3;
+    }
+
+    else if ( num1 < num2 && num2 > num3){
+        cout << num3 << " " << num1 << " " << num2;
+    }
+
+    else if ( num1 > num2 && num2 < num3){
+        cout << num1 << " " << num2 << " " << num3;
+    }
+
+}
 
 
 }
@@ -459,6 +586,9 @@ int main(){
    //lecture_5();
    //lecture_6();
    lecture_7();
+   gender_1_lecture_7()
+   gender_2_lecture_7()
+   ascending_order_lecture_7()
     return 0;
 }
 
