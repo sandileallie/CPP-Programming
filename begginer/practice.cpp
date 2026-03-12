@@ -616,7 +616,95 @@ int main(){
 
 
 
+#include <iostream>
+#include <cmath>
 
+using namespace std;
+
+int main()
+{
+    // Bill program for vodacom
+
+    int account_number, num_min_day, num_nin_night;
+    char service_code;
+
+    cout << "Enter account number : " << '\n';
+    cin >> account_number;
+
+    cout << "Enter a service code : " << '\n';
+    cin >> service_code;
+
+
+    double regular_rate = 0.20, premium_rate_day = 0.10, premium_rate_night = 0.05;
+
+    if ( service_code == 'r' && num_min_day < 50 ){
+
+        cout << "You are a regular member " << '\n';
+
+        cout << "Enter number of minutes used during day" << '\n';
+        cin >> num_min_day;
+
+        int num_used = abs(num_min_day-50) ;
+
+        if ( num_min_day > 50){
+            cout << "you have used " << num_min_day << " mibutes " << '\n';
+
+            double amount_used = num_used*regular_rate;
+            double amount_left = 100 - amount_used;
+
+            cout << "The amount left in your account is " << amount_left << '\n';
+
+        }
+    }
+
+    if( service_code == 'P' && true){
+
+    if (service_code == 'P'){
+        cout << "You are a premium member " << '\n';
+
+        cout << "Enter number of minutes used during day" << '\n';
+        cin >> num_min_day;
+
+        cout << "Enter number of minutes used during night" << '\n';
+        cin >> num_nin_night;
+
+            if (num_min_day < 75 && num_nin_night < 100){
+
+                int num_used_day_2 = abs(75-num_min_day) ;
+                int num_used_night = abs(100-num_nin_night-100) ;
+
+                cout << "The number of minutes left for the day in your account is " << num_used_day_2 << '\n';
+                cout << "The number of minutes left for the night in your account is " << num_used_night << '\n';
+                cout << "The amount left in your account is " << 120 << '\n';
+            }
+
+    }
+
+        else if ( num_min_day > 75 && num_nin_night > 100){
+
+                int num_used_day_2 = abs(75-num_min_day) ;
+                int num_used_night = abs(100-num_nin_night-100) ;
+
+                double amount_used_2 = num_min_day*premium_rate_day;
+
+
+                double amount_used_3 = num_nin_night*premium_rate_day;
+                double amount_left_3 = abs(120 - amount_used_3- amount_used_2);
+
+
+                cout << "The amount left in your account is " << amount_left_3 << '\n';
+
+        }
+    }
+
+
+
+
+    return 0;
+}
+
+
+// Write a program
 
 
 
