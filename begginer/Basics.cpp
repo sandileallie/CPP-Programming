@@ -388,6 +388,20 @@ void find_index_string(){
 
 }
 
+void roman_to_num(){
+
+    char roman_numeral[7] = {'M','D','E','C','X','V','L'};
+    int num[7] = {1000,500,100,50,10,5,1};
+    char found = 'D';
+
+    for(int i=0 ; i<7 ; ++i){
+        if(roman_numeral[i]==found){
+            std::cout << "The roman numeral " << roman_numeral[i] << " is " << num[i] << '\n';
+        }
+    }
+
+}
+
 void for_loop(){
 
     for(int i=0; i<5; i++){
@@ -421,7 +435,8 @@ int main(){
 //floating_point();
 //example_mod();
 //find_value_array();
-for_loop();
+//for_loop();
+roman_to_num();
 
 
 
