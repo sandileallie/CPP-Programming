@@ -591,6 +591,175 @@ void ascending_order_lecture_7(){
 
 
 
+void bill_lecture_8(){
+
+    // Bill program for vodacom
+
+    int account_number, num_min_day, num_nin_night;
+    char service_code;
+
+    std::cout << "Enter account number : " << '\n';
+    std::cin >> account_number;
+
+    std::cout << "Enter a service code : " << '\n';
+    std::cin >> service_code;
+
+    std::cout << "Enter number of minutes used during day" << '\n';
+    std::cin >> num_min_day;
+
+
+    double regular_rate = 0.20, premium_rate_day = 0.10, premium_rate_night = 0.05;
+
+
+
+    if ( service_code == 'r' ){
+
+        std::cout << "You are a regular member " << '\n';
+
+        int num_used = abs(num_min_day-50) ;
+        double amount_used = num_used*regular_rate;
+        double amount_left = 100 - amount_used;
+
+        std::cout << "you have used " << num_min_day << " minutes " << '\n';
+
+        if (num_min_day < 50){
+
+            std::cout << "The amount left in your account is " << " R" << 50 << '\n';
+
+        }
+
+        else if ( num_min_day > 50 && amount_left > 0 ){
+
+            std::cout << "The amount left in your account is " << amount_left << '\n';
+
+        }
+
+        else if ( num_min_day > 50 && amount_left < 0 ){
+
+            double amount_owe = abs(amount_left)-100;
+
+            std::cout << "The amount you owe in your account is " << amount_owe << '\n';
+        }
+
+    }
+
+
+
+     else if (service_code == 'p'){
+            std::cout << "You are a premium member " << '\n';
+
+            std::cout << "Enter number of minutes used during night" << '\n';
+            std::cin >> num_nin_night;
+
+            std::cout << "you have used " << num_min_day << " minutes during the day" << '\n';
+            std::cout << "you have used " << num_nin_night << " minutes during the night" << '\n';
+
+            int num_used_day = abs(num_min_day-75) ; // 75-100=35
+            int num_used_night = abs(num_nin_night-100) ; //100-130=30  >> total = 35+30=65
+            int extra_min = num_used_day + num_used_night;
+            double amount_used = extra_min*premium_rate_day;
+            double amount_left = 120 - amount_used;
+
+            std::cout  << '\n';
+
+            if(num_min_day < 75 && num_nin_night < 100){
+
+                std::cout << "The amount left in your account is " <<" R" << 120 << '\n';
+
+            }
+
+            else if ( num_min_day > 75 && num_nin_night > 100 && amount_left > 0){
+
+                std::cout << "The amount left in your account is " << amount_used << '\n';
+
+            }
+
+            else if ( num_min_day > 75 && num_nin_night > 100 && amount_left < 0){
+                double amount_owe = abs(amount_left)-120;
+
+                std::cout << "The amount you owe in your account is " << amount_used << '\n';
+
+            }
+
+        }
+
+    }
+
+
+
+
+void vodacom_bill(){
+
+    int account_num, no_of_min_day, no_of_min_night;
+    double rate_regular = 0.20, rate_premium_day = 0.10, rate_premium_night = 0.05;
+    char service_code;
+
+    std::cout << "Enter account number : " << '\n';
+    std::cin >> account_num;
+
+    std::cout << "Enter service code : " << '\n';
+    std::cin >> service_code;
+
+
+    if(service_code == 'r'){
+            std::cout << "regular account" <<'\n';
+
+            std::cout << "Enter number of minutes used today : " << '\n';
+            std::cin >> no_of_min_day;
+            std::cout << "You have used " << no_of_min_day << " Minutes today " << '\n';
+
+            int no_of_min_left = no_of_min_day - 50, extra_min = abs(no_of_min_left);
+            double amount_left = extra_min*rate_regular;
+            double amount_owe = 100-amount_left;
+
+            if(no_of_min_day < 50){
+                std::cout << "Amount left " << " R" << 100 << '\n';
+            }
+            else if (no_of_min_day > 50 && amount_owe > 0){
+                std::cout << "Amount owed " << " R" << amount_left << '\n';
+            }
+            else if (no_of_min_day > 50 && amount_owe < 0){
+                std::cout << "Amount owed " << " R" << abs(amount_owe) << '\n';
+            }
+        }
+
+
+    else if(service_code == 'p'){
+        std::cout << "Premium account " << '\n';
+
+        std::cout << "Enter number of minutes used today : " << '\n';
+        std::cin >> no_of_min_day;
+        std::cout << "Enter number of minutes used at night : " << '\n';
+        std::cin >> no_of_min_night;
+
+        std::cout << "You have use " << no_of_min_day << " Minutes today " << '\n';
+        std::cout << "You have used " << no_of_min_night << " Minutes during night time " << '\n';
+
+        int no_of_min_left = no_of_min_day-75, no_of_min_night_left=no_of_min_night-100;
+        double amount_left = abs(no_of_min_left)*rate_premium_day, amount_left_night = abs(no_of_min_night_left)*rate_premium_night;
+        double total_amount_left = abs(120-(amount_left + amount_left_night));
+        double amount_owe = 120-total_amount_left;
+
+        if ( no_of_min_day < 75 && no_of_min_night < 100){
+            std::cout << "Your amount is " << "R" << 120 << '\n';
+        }
+        else if (no_of_min_day > 75 && no_of_min_night > 100 && amount_owe > 0){
+                std::cout << "Amount left " << " R" << total_amount_left << '\n';
+            }
+        else if(no_of_min_day > 75 && no_of_min_night > 100 && amount_owe < 0){
+            std::cout << "You owe " << "R" << abs(amount_owe) ;
+        }
+
+    }
+
+}
+
+
+
+
+
+
+
 int main(){
 
    // practice();
@@ -605,106 +774,12 @@ int main(){
    //lecture_7_1();
    //gender_1_lecture_7()
    //gender_2_lecture_7()
-   ascending_order_lecture_7();
+   //ascending_order_lecture_7();
+   //bill_lecture_8();
+   vodacom_bill();
     return 0;
 }
 
-
-
-
-
-
-
-
-#include <iostream>
-#include <cmath>
-
-using namespace std;
-
-int main()
-{
-    // Bill program for vodacom
-
-    int account_number, num_min_day, num_nin_night;
-    char service_code;
-
-    cout << "Enter account number : " << '\n';
-    cin >> account_number;
-
-    cout << "Enter a service code : " << '\n';
-    cin >> service_code;
-
-
-    double regular_rate = 0.20, premium_rate_day = 0.10, premium_rate_night = 0.05;
-
-    if ( service_code == 'r' && num_min_day < 50 ){
-
-        cout << "You are a regular member " << '\n';
-
-        cout << "Enter number of minutes used during day" << '\n';
-        cin >> num_min_day;
-
-        int num_used = abs(num_min_day-50) ;
-
-        if ( num_min_day > 50){
-            cout << "you have used " << num_min_day << " mibutes " << '\n';
-
-            double amount_used = num_used*regular_rate;
-            double amount_left = 100 - amount_used;
-
-            cout << "The amount left in your account is " << amount_left << '\n';
-
-        }
-    }
-
-    if( service_code == 'P' && true){
-
-    if (service_code == 'P'){
-        cout << "You are a premium member " << '\n';
-
-        cout << "Enter number of minutes used during day" << '\n';
-        cin >> num_min_day;
-
-        cout << "Enter number of minutes used during night" << '\n';
-        cin >> num_nin_night;
-
-            if (num_min_day < 75 && num_nin_night < 100){
-
-                int num_used_day_2 = abs(75-num_min_day) ;
-                int num_used_night = abs(100-num_nin_night-100) ;
-
-                cout << "The number of minutes left for the day in your account is " << num_used_day_2 << '\n';
-                cout << "The number of minutes left for the night in your account is " << num_used_night << '\n';
-                cout << "The amount left in your account is " << 120 << '\n';
-            }
-
-    }
-
-        else if ( num_min_day > 75 && num_nin_night > 100){
-
-                int num_used_day_2 = abs(75-num_min_day) ;
-                int num_used_night = abs(100-num_nin_night-100) ;
-
-                double amount_used_2 = num_min_day*premium_rate_day;
-
-
-                double amount_used_3 = num_nin_night*premium_rate_day;
-                double amount_left_3 = abs(120 - amount_used_3- amount_used_2);
-
-
-                cout << "The amount left in your account is " << amount_left_3 << '\n';
-
-        }
-    }
-
-
-
-
-    return 0;
-}
-
-
-// Write a program
 
 
 
