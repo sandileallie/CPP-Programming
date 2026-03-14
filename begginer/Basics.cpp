@@ -20,7 +20,7 @@ void integrals(){
     short x_3 = -32768; // integers betwenn -32768 to 32768 iy has 1 byte
     bool x_4 = true ; // They are called logical values, (true or fals)
 
-    std::cout << x_1 << '\n';
+    std::cout << x_1 << '\n'; //This sign "<<" is astream insertion operatore
     std::cout << x_2 << '\n';
     std::cout << x_3 << '\n';
     std::cout << x_4 << '\n';
@@ -444,3 +444,49 @@ roman_to_num();
 
     return 0;
 }
+
+
+
+
+
+
+
+/*
+
+Chapter 1
+    #Elements of computer system(6)
+    #Central processing unit(CPU)
+    #CPU & main memory
+    #Secondary storage
+    #I/O device
+    #Software and application program
+    #The language of a computer
+    #Define: Analog signal, machin language, binary digit(bit), binary code, byte, ASCII
+
+
+Chapter 2
+    #Basic elements of cpp(Variable, Function)
+    #Comments(Single line, Multinine Comments)
+    #Special symboles()
+    #Reserved Words
+    #Identifiers
+    #Whitespace
+    #Data types
+    #Data types, variables, and assignment statement
+    #Arithmetic operators, operator presidence, and expressions
+    #Expressions
+    #Type conversion(Casting)
+    #String Type
+    #Alocating memory with constant variables
+    #Puting data into variables
+    #Declaring and initializing variable
+    #Input and Output
+    #Increment and Decrement operators
+    #Preprocessor Directives
+    #Namespace and using 'cin' and 'cout' in a program
+    #Using the string Data type in a program
+    #Creating a cpp program
+
+
+
+*/
