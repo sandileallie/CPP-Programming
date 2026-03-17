@@ -767,12 +767,10 @@ void lectur_9(){
 
 
 
-        // add this numbers and find an average:
+    // add this numbers and find an average:
     // 8 9 2 3 90 38 299 7 5 8 3 9 58 26 141
 
     int num [15] = {8, 9, 2, 3, 90, 38, 299,7, 5, 8, 3, 9, 58, 26, 141};
-
-
     int i = 0;
     while (i <= 14){
         int values = num[i];
@@ -784,7 +782,7 @@ void lectur_9(){
     }
 
 
-        int  a,b,c,d,e,f,g,h,i,j;
+    int  a,b,c,d,e,f,g,h,i,j;
     cout << "Enter your entergers 5 : " << '\n';
     cin >> a >> b >> c >> d >> e >> f >> g >> h >> i >> j;
     int nums[10] = {a,b,c,d,e,f,g,h,i,j}
@@ -798,7 +796,7 @@ void lectur_9(){
     }
 
 
-    // program is caled telephone
+// program is caled telephone
 // this is a sentinel control loop, the program MUST convert uppercase letters to their corresponding telephone digits
 
     char letter;
@@ -867,6 +865,47 @@ void lectur_9(){
             cout << "Invalid letter " << '\n';
             cin >> letter;
 
+    }
+
+
+ //This loop is used when working with variables  data such as user input,
+ //a count controlled loop uses a var called counter var and in each iteration of the loop
+ //we must modify the counter  in some way that it reaches a termination condition.
+
+    int counter;
+    cout << "Enter Counter : " << '\n';
+    cin >> counter;
+
+    while( counter <= 10){
+        cout << "first counter : " << counter << '\n';
+        counter++;
+
+        cout << " Enter a number greater than 10" << '\n' ;
+        cin >> counter;
+
+    }
+
+
+ //a program that reads an indefinite number of no-negative integers from a user and calculates their sum,
+ //a negative number (eg. -10 is used as the sentinel to terminate the loop
+
+
+    int num ;
+    int sum = 0;
+
+    cout << "Enter your number : " << '\n';
+    cin >> num;
+
+    while( num != -1){
+        sum = sum + num;
+        if (sum > 0){
+            cout << "The sum of your numbers is : " << sum << '\n';
+        }
+        else{
+            cout << "You have entered a negative number " << '\n';
+        }
+        cout << "Enter -1 to end the loop : ";
+        cin >> num;
     }
 
 
