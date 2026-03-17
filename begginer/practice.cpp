@@ -754,6 +754,124 @@ void vodacom_bill(){
 
 }
 
+void lectur_9(){
+
+    int a, b, c, d, e ;
+    cout << "Enter 5 numbers : " << '\n';
+    cin >> a >> b >> c >> d >> e;
+
+    int sum = a+b+c+d+e;
+    int average = sum/5;
+
+    cout << "The average : " << average << endl;
+
+
+
+        // add this numbers and find an average:
+    // 8 9 2 3 90 38 299 7 5 8 3 9 58 26 141
+
+    int num [15] = {8, 9, 2, 3, 90, 38, 299,7, 5, 8, 3, 9, 58, 26, 141};
+
+
+    int i = 0;
+    while (i <= 14){
+        int values = num[i];
+        int sum = 0;
+        sum = sum + values;
+        //int average = sum / 15;
+        cout << "Average : " << sum << '\n';
+        i= i+1;
+    }
+
+
+        int  a,b,c,d,e,f,g,h,i,j;
+    cout << "Enter your entergers 5 : " << '\n';
+    cin >> a >> b >> c >> d >> e >> f >> g >> h >> i >> j;
+    int nums[10] = {a,b,c,d,e,f,g,h,i,j}
+    int sum = 0;
+
+    while( nums != -999 ){
+            sum = sum ;
+
+            cout << sum ;
+
+    }
+
+
+    // program is caled telephone
+// this is a sentinel control loop, the program MUST convert uppercase letters to their corresponding telephone digits
+
+    char letter;
+    cout << "Enter a letter : " << '\n';
+    cin >> letter;
+
+    while( letter != '#'){
+
+        cout << "Letter is : " << letter << '\n';
+        cout << "The digit of  " << letter << " is " ;
+
+        if (letter >= 'A' && letter <= 'Z')
+            switch (letter){
+
+            case 'A' :
+            case 'B' :
+            case 'C' :
+                cout << 2 << '\n';
+                break;
+
+            case 'D' :
+            case 'E' :
+            case 'F' :
+                cout << 3 << '\n';
+                break;
+
+            case 'G' :
+            case 'H' :
+            case 'I' :
+                cout << 4 << '\n';
+                break;
+
+            case 'J' :
+            case 'K' :
+            case 'L' :
+                cout << 5 << '\n';
+                break;
+
+            case 'M' :
+            case 'N' :
+            case 'O' :
+                cout << 6 << '\n';
+                break;
+
+            case 'P' :
+            case 'Q' :
+            case 'R' :
+                cout << 7 << '\n';
+                break;
+
+            case 'S' :
+            case 'T' :
+            case 'U' :
+                cout << 8 << '\n';
+                break;
+
+            case 'V' :
+            case 'X' :
+            case 'Y' :
+            case 'Z' :
+                cout << 9 << '\n';
+                break;
+            }
+
+        else
+            cout << "Invalid letter " << '\n';
+            cin >> letter;
+
+    }
+
+
+}
+
 
 
 
