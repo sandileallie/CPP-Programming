@@ -770,33 +770,44 @@ void lectur_9(){
     // add this numbers and find an average:
     // 8 9 2 3 90 38 299 7 5 8 3 9 58 26 141
 
-    int num [15] = {8, 9, 2, 3, 90, 38, 299,7, 5, 8, 3, 9, 58, 26, 141};
-    int i = 0;
-    while (i <= 14){
-        int values = num[i];
-        int sum = 0;
-        sum = sum + values;
-        //int average = sum / 15;
-        cout << "Average : " << sum << '\n';
-        i= i+1;
-    }
+    int num ;
+    cout << "Enter the following numbers: 8 9 2 3 90 38 299 7 5 8 3 9 58 26 141 " << '\n';
 
 
-    int  a,b,c,d,e,f,g,h,i,j;
-    cout << "Enter your entergers 5 : " << '\n';
-    cin >> a >> b >> c >> d >> e >> f >> g >> h >> i >> j;
-    int nums[10] = {a,b,c,d,e,f,g,h,i,j}
     int sum = 0;
 
-    while( nums != -999 ){
-            sum = sum ;
-
-            cout << sum ;
+    int i = 0;
+    while (i <= 15){
+        cin >> num;
+        sum = sum + num;
+        int average = sum / 15;
+        cout << "Average : " << average << '\n';
+        i++;
 
     }
 
 
-// program is caled telephone
+    // a sentinel program, that when you enter -999 it exit the while loop
+    // your program needs to have 5 positive intergers
+    // and add all of those positive integers and return their sum
+
+    int  integers;
+    cout << "Enter your entergers 5 : " << '\n';
+
+    int range = 0;
+    int sum = 0;
+
+    while( integers != -999 && range <= 5 ){
+
+            cin >> integers;
+            sum = sum + integers ;
+            int average = sum / 5;
+
+            cout << "Your average is : " << average << '\n';
+    }
+
+
+// program is called telephone
 // this is a sentinel control loop, the program MUST convert uppercase letters to their corresponding telephone digits
 
     char letter;
