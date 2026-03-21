@@ -922,6 +922,43 @@ void lectur_9(){
 
 }
 
+void lecture_10(){
+
+    //a guessing game uses a bool var isGuesed program generate an int >=0 and < 100
+    //program promts you to gues num
+    //if you guess numcorrectly program outputs appropriate message
+    //if gues num < than random num prog output  "Your guess is lower than num. Gues again"
+    //otherwise output msg: "your guess is higher than num. Gues num again"
+    //program prompts u to gues random num until u enter the correct num
+
+    int num;
+    int guess;
+    bool isGuessed;
+
+    srand(time(0));
+    num = rand() % 100;
+
+    isGuessed =false;
+
+    while(!isGuessed){
+        cout << "Enter a number greater than or equal to 0 and less than 100: " << '\n';
+        cin >> guess;
+
+        if (guess == num){
+            cout << "You guessed a correct number " << '\n';
+            isGuessed = true;
+        }
+        else if (guess < num){
+            cout << "Your gues is less than the number. Guess again " << '\n';
+        }
+        else{
+            cout << "your guess is higher than the number " << '\n';
+        }
+
+    }
+
+}
+
 
 
 
