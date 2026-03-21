@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include <algorithm>
+#include <iomanip> // This is a I/O Manipulation(manip) header file used to manipulate input and output
 
 
 // User defined function
@@ -220,6 +221,31 @@ void input(){
 
 }
 
+void iomanip(){
+
+    //Displaying Floating-Point Numbers
+    //      fixed: output floating points in fixed notation
+    //      scientific: output floating points in scientific notation
+    //      showpoint: show the mantissa of a floating point even if it is 0
+
+    double var1 = 14.0, var2 = 1234.56789;
+
+    //showpoint
+    std::cout << var1 << " without showpoint " << '\n'; // This line will just show us without the decimal.
+    std::cout << std::showpoint << var1 << " with showpoint " << '\n'; // This one will force us to display the decimal even if it 0.
+    std::cout << '\n';
+
+    //fixed
+    std::cout << var2 << " without fixed " << '\n'; // This line will display into two decimal places.
+    std::cout << std::fixed << var2 << " with fixed " << '\n'; // This line will display in precision into 6 decimal places.
+    std::cout << '\n';
+
+    //scientific
+    std::cout << var2 << " without scientific notation " << '\n';
+    std::cout << std::scientific << var2 << " with scientif " << '\n';
+    std::cout << '\n';
+}
+
 
 /*
     Some usefull math fuctions
@@ -436,7 +462,8 @@ int main(){
 //example_mod();
 //find_value_array();
 //for_loop();
-roman_to_num();
+//roman_to_num();
+iomanip();
 
 
 
