@@ -959,6 +959,42 @@ void lecture_10(){
 
 }
 
+void lecture_11(){
+
+     //Write a program that that determines wheter a positive int is divisible by 3 and 9
+    //by first finding the sum of its difits then checkin whether the sum is divisible by 3 and 9.
+
+    int num, sum, temp;
+    cout << "Enter a positive integer : " << '\n';
+    cin >> num;
+
+    temp = num;
+    sum = 0;
+
+    do {
+        sum = sum + num % 10;
+        num = num / 10;
+    }
+    while( num > 0);
+
+    cout << "The sum of the digits on the integer = " << sum << '\n';
+
+    if ( sum % 3 == 0 )
+        cout << temp << " Is divisible by 3 " << '\n';
+
+    else
+        cout << temp << " Is not divisible by 3" << '\n';
+
+
+    if ( sum % 9 == 0)
+        cout << temp << " Is divisible by 9" << '\n';
+
+    else
+        cout << temp << " Is not divisible by 9" << '\n';
+
+
+}
+
 
 
 
