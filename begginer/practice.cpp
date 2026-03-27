@@ -757,67 +757,72 @@ void vodacom_bill(){
 void lectur_9(){
 
     int a, b, c, d, e ;
-    cout << "Enter 5 numbers : " << '\n';
-    cin >> a >> b >> c >> d >> e;
+    std::cout << "Enter 5 numbers : " << '\n';
+    std::cin >> a >> b >> c >> d >> e;
 
     int sum = a+b+c+d+e;
     int average = sum/5;
 
-    cout << "The average : " << average << endl;
+    std::cout << "The average : " << average << '\n' ;
+}
 
-
+void lecture_9_1(){
 
     // add this numbers and find an average:
     // 8 9 2 3 90 38 299 7 5 8 3 9 58 26 141
 
     int num ;
-    cout << "Enter the following numbers: 8 9 2 3 90 38 299 7 5 8 3 9 58 26 141 " << '\n';
+    std::cout << "Enter the following numbers: 8 9 2 3 90 38 299 7 5 8 3 9 58 26 141 " << '\n';
 
 
-    int sum = 0;
+    int sum_1 = 0;
 
     int i = 0;
     while (i <= 15){
-        cin >> num;
-        sum = sum + num;
-        int average = sum / 15;
-        cout << "Average : " << average << '\n';
+        std::cin >> num;
+        sum_1 = sum_1 + num;
+        int average = sum_1 / 15;
+        std::cout << "Average : " << average << '\n';
         i++;
 
     }
 
+}
 
+void lecture_9_2(){
     // a sentinel program, that when you enter -999 it exit the while loop
     // your program needs to have 5 positive intergers
     // and add all of those positive integers and return their sum
 
     int  integers;
-    cout << "Enter your entergers 5 : " << '\n';
+    std::cout << "Enter your entergers 5 : " << '\n';
 
     int range = 0;
-    int sum = 0;
+    int sum_2 = 0;
 
     while( integers != -999 && range <= 5 ){
 
-            cin >> integers;
-            sum = sum + integers ;
-            int average = sum / 5;
+            std::cin >> integers;
+            sum_2 = sum_2 + integers ;
+            int average = sum_2 / 5;
 
-            cout << "Your average is : " << average << '\n';
+            std::cout << "Your average is : " << average << '\n';
     }
+}
 
+void lecture_9_3(){
 
 // program is called telephone
 // this is a sentinel control loop, the program MUST convert uppercase letters to their corresponding telephone digits
 
     char letter;
-    cout << "Enter a letter : " << '\n';
-    cin >> letter;
+    std::cout << "Enter a letter : " << '\n';
+    std::cin >> letter;
 
     while( letter != '#'){
 
-        cout << "Letter is : " << letter << '\n';
-        cout << "The digit of  " << letter << " is " ;
+        std::cout << "Letter is : " << letter << '\n';
+        std::cout << "The digit of  " << letter << " is " ;
 
         if (letter >= 'A' && letter <= 'Z')
             switch (letter){
@@ -825,102 +830,106 @@ void lectur_9(){
             case 'A' :
             case 'B' :
             case 'C' :
-                cout << 2 << '\n';
+                std::cout << 2 << '\n';
                 break;
 
             case 'D' :
             case 'E' :
             case 'F' :
-                cout << 3 << '\n';
+                std::cout << 3 << '\n';
                 break;
 
             case 'G' :
             case 'H' :
             case 'I' :
-                cout << 4 << '\n';
+                std::cout << 4 << '\n';
                 break;
 
             case 'J' :
             case 'K' :
             case 'L' :
-                cout << 5 << '\n';
+                std::cout << 5 << '\n';
                 break;
 
             case 'M' :
             case 'N' :
             case 'O' :
-                cout << 6 << '\n';
+                std::cout << 6 << '\n';
                 break;
 
             case 'P' :
             case 'Q' :
             case 'R' :
-                cout << 7 << '\n';
+                std::cout << 7 << '\n';
                 break;
 
             case 'S' :
             case 'T' :
             case 'U' :
-                cout << 8 << '\n';
+                std::cout << 8 << '\n';
                 break;
 
             case 'V' :
             case 'X' :
             case 'Y' :
             case 'Z' :
-                cout << 9 << '\n';
+                std::cout << 9 << '\n';
                 break;
             }
 
         else
-            cout << "Invalid letter " << '\n';
-            cin >> letter;
+            std::cout << "Invalid letter " << '\n';
+            std::cin >> letter;
 
     }
+}
 
-
+void lecture_9_4(){
  //This loop is used when working with variables  data such as user input,
  //a count controlled loop uses a var called counter var and in each iteration of the loop
  //we must modify the counter  in some way that it reaches a termination condition.
 
     int counter;
-    cout << "Enter Counter : " << '\n';
-    cin >> counter;
+    std::cout << "Enter Counter : " << '\n';
+    std::cin >> counter;
 
     while( counter <= 10){
-        cout << "first counter : " << counter << '\n';
+        std::cout << "first counter : " << counter << '\n';
         counter++;
 
-        cout << " Enter a number greater than 10" << '\n' ;
-        cin >> counter;
+        std::cout << " Enter a number greater than 10" << '\n' ;
+        std::cin >> counter;
 
     }
 
+}
 
+
+void lecture_9_5(){
  //a program that reads an indefinite number of no-negative integers from a user and calculates their sum,
  //a negative number (eg. -10 is used as the sentinel to terminate the loop
 
 
-    int num ;
-    int sum = 0;
+    int num_3 ;
+    int sum_3 = 0;
 
-    cout << "Enter your number : " << '\n';
-    cin >> num;
+    std::cout << "Enter your number : " << '\n';
+    std::cin >> num_3;
 
-    while( num != -1){
-        sum = sum + num;
-        if (sum > 0){
-            cout << "The sum of your numbers is : " << sum << '\n';
+    while( num_3 != -1){
+        sum_3 = sum_3 + num_3;
+        if (sum_3 > 0){
+            std::cout << "The sum of your numbers is : " << sum_3 << '\n';
         }
         else{
-            cout << "You have entered a negative number " << '\n';
+            std::cout << "You have entered a negative number " << '\n';
         }
-        cout << "Enter -1 to end the loop : ";
-        cin >> num;
+        std::cout << "Enter -1 to end the loop : ";
+        std::cin >> num_3;
     }
 
-
 }
+
 
 void lecture_10(){
 
@@ -941,18 +950,18 @@ void lecture_10(){
     isGuessed =false;
 
     while(!isGuessed){
-        cout << "Enter a number greater than or equal to 0 and less than 100: " << '\n';
-        cin >> guess;
+        std::cout << "Enter a number greater than or equal to 0 and less than 100: " << '\n';
+        std::cin >> guess;
 
         if (guess == num){
-            cout << "You guessed a correct number " << '\n';
+            std::cout << "You guessed a correct number " << '\n';
             isGuessed = true;
         }
         else if (guess < num){
-            cout << "Your gues is less than the number. Guess again " << '\n';
+            std::cout << "Your gues is less than the number. Guess again " << '\n';
         }
         else{
-            cout << "your guess is higher than the number " << '\n';
+            std::cout << "your guess is higher than the number " << '\n';
         }
 
     }
@@ -965,8 +974,8 @@ void lecture_11(){
     //by first finding the sum of its difits then checkin whether the sum is divisible by 3 and 9.
 
     int num, sum, temp;
-    cout << "Enter a positive integer : " << '\n';
-    cin >> num;
+    std::cout << "Enter a positive integer : " << '\n';
+    std::cin >> num;
 
     temp = num;
     sum = 0;
@@ -977,51 +986,134 @@ void lecture_11(){
     }
     while( num > 0);
 
-    cout << "The sum of the digits on the integer = " << sum << '\n';
+    std::cout << "The sum of the digits on the integer = " << sum << '\n';
 
     if ( sum % 3 == 0 )
-        cout << temp << " Is divisible by 3 " << '\n';
+        std::cout << temp << " Is divisible by 3 " << '\n';
 
     else
-        cout << temp << " Is not divisible by 3" << '\n';
+        std::cout << temp << " Is not divisible by 3" << '\n';
 
 
     if ( sum % 9 == 0)
-        cout << temp << " Is divisible by 9" << '\n';
+        std::cout << temp << " Is divisible by 9" << '\n';
 
     else
-        cout << temp << " Is not divisible by 9" << '\n';
+        std::cout << temp << " Is not divisible by 9" << '\n';
+
+}
 
 
+void lecture_11_1(){
+
+    /*
+        Write a program that output the following output.
+        >>12345
+        >>23456
+        >>34567
+        >>45678
+        >>56789
+    */
 
      for(int i =1; i<=5 ; i++){
             for(int j=i; j < i + 5; j++){
-                cout << j;
+                std::cout << j;
+                /*
+                    value: j = 1; 1 < 6;
+                           j = 2; 2 < 7;
+                           j = 3; 3 < 8;
+                           j = 4; 4 < 9;
+                           j = 5; 5 < 10;
+                    output: 12345, 23456, 34567, 45678, 56789
+                */
             }
 
-        cout <<'\n' ;
+        std::cout <<'\n' ; // This line will print out eat output of the inner loop in a new line excluding the outer loop.
     }
+}
+
+
+void lecture_11_2(){
+
+        // Write a program that output a half star
 
         for(int i =1; i<=5 ; i++){
             for(int j=1; j <= i ; j++){
-                cout << "*";
+                /*
+                    value: j = 1; 1 <= 1;
+                           j = 1; 1 <= 2;
+                           j = 1; 1 <= 3;
+                           j = 1; 1 <= 4;
+                           j = 1; 1 <= 5;
+                    output: 1, 12, 123, 1234, 12345;
+
+                */
+
+                std::cout << "*"; // This line will output the char '*' in the pace of value of j eg: *, **, ***, ****, *****;
             }
-            cout << '\n' ;
+            std::cout << '\n' ; // This line will print out the value of j (inner loop) in a new line.
+        }
+
     }
+
+void lecture_11_3(){
 
         for(int i =1; i<=5 ; i++){
+            for (int y = 1; y <= 6-i ; y++) {
+                std::cout << " ";  // This line will replace the value of y with a blank space.
+                /*
+                    vallue: y = 1; 1 <= 5;
+                            y = 1; 1 <= 4;
+                            y = 1; 1 <= 3;
+                            y = 1; 1 <= 2;
+                            y = 1; 1 <= 1;
+                    output: 1234, 123,12, 1 ;
 
-            for (int y = 1; y <= 5-i ; y++) {
-                cout << " ";
-
-        }
-            for (int y = 1; y <= i ; y++) {
-                    cout << "* ";
+                            12345
+                            1234
+                            123
+                            12
+                            1
+                */
             }
-        cout << '\n';
+            for (int z = 1; z <= i ; z++) {
+                /*
+                    value: z = 1; 1 <= 1;
+                           z = 1; 1 <= 2;
+                           z = 1; 1 <= 3;
+                           z = 1; 1 <= 4;
+                           z = 1; 1 <= 4
+                    output: 1, 12, 123, 1234, 12345 ;
+
+                            1
+                            12
+                            123
+                            1234
+                            12345
+
+                    THE PROGRAM WILL START WITH VALUE OF THE FIRST INNER LOOP AND THEN THE VALUE OF SECOND INNER LOOP AND IT WILL PRINT THEN IN THE SAME LINE.
+                    AND THE FINAL OUTPUT WILL LOOK LIKE:
+                                                        12345        1                  123451
+                                                        1234         12                 123412
+                                                        123    +     123          ===>  123123
+                                                        12           1234               121234
+                                                        1            12345              112345
+                */
+
+                    std::cout << "* "; // This line will replace the value of z with a string="* ".
+            }
+        std::cout << '\n'; // This line will print out the value of the 2 inner loops in a new line.
     }
 
+}
 
+                                 //Understanding for loops
+
+void basicFor(){
+
+    for(int i=0; i < 6; ++i){
+        std::cout << i << "_";
+    }
 }
 
 
@@ -1046,7 +1138,20 @@ int main(){
    //gender_2_lecture_7()
    //ascending_order_lecture_7();
    //bill_lecture_8();
-   vodacom_bill();
+   //vodacom_bill();
+   //lectur_9();
+   //lecture_9_1();
+   //lecture_9_2();
+   //lecture_9_3();
+   //lecture_9_4();
+   //lecture_9_5();
+   //lecture_10();
+   //lecture_11();
+   //lecture_11_1();
+   //lecture_11_2();
+   lecture_11_3();
+
+
     return 0;
 }
 
