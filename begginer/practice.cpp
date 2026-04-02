@@ -1117,7 +1117,25 @@ void basicFor(){
 }
 
 
-
+void practice_02_04(){
+    // Using while loop to print out full triangle
+    
+    int i = 0;
+    while( i < 5){
+        cout << '\n';
+        ++i;
+        int j = i;
+        int y = 6-i;
+        while ( j < 6){
+            cout << " " ;
+            ++j;
+        }
+        while( y < 6){
+            cout << y << " ";
+            y++;
+        }
+    }
+}
 
 
 
