@@ -1118,6 +1118,78 @@ void basicFor(){
 
 
 void practice_02_04(){
+
+
+  // Bill for vodacom
+
+    int min_used, min_used_day, min_used_night, account_num;
+    char code;
+
+    cout << "Enter account number : " << '\n' ;
+    cin >> account_num;
+    cout << "Enter service code : " << '\n';
+    cin >> code;
+
+    if(code == 'r'){
+        cout << "Enter number of minutes used : " << '\n';
+        cin >> min_used ;
+        cout << "You have used " << min_used << " Minutes " << '\n';
+
+        int num_min_used = 50 - min_used;
+        double charged_amount = num_min_used*0.20;
+        double amount_left = 100 - abs(charged_amount);
+
+        if(min_used < 50){
+            cout << "Amount left : " << "R100" << '\n';
+        }
+        else if(min_used > 50 && amount_left > 0 && amount_left < 100){
+            cout << "Amount left : " << 'R' <<amount_left << '\n';
+        }
+        else{
+            cout << "You owe : " << 'R' << abs(amount_left) << '\n';
+        }
+    }
+
+    else if( code == 'p'){
+        cout << "Enter number of minutes : " << '\n';
+        cin >> min_used_day ;
+        cout << "You have used " << min_used_day << " minutes during the day " << '\n';
+        cout << "Enter number of minutes usded at night : " << '\n';
+        cin >> min_used_night ;
+        cout << "You have used " << min_used_night << " minutes at night " << '\n';
+
+        int num_min_used = 75 - min_used_day, num_min_used_n = 100 - min_used_night;
+        double charges_d = abs(num_min_used*0.10), charges_n = abs(num_min_used_n*0.05);
+        double amount_left = 120 - (charges_d + charges_n);
+
+        if(min_used_day < 75 && min_used_night < 100){
+            cout << "Amount left : " << "R100" << '\n';
+        }
+        else if (min_used_day > 75 && min_used_night > 100 && amount_left>0 && amount_left < 120){
+            cout << "Amount left : " << amount_left << '\n';
+        }
+        else{
+            cout << "You owe : " << 'R' << abs(amount_left);
+        }
+    } 
+
+
+
+// Sum of an interger.
+ int i = 0;
+ int num = 12345;
+ int sum = 0;
+
+ while ( i < 5){
+        int remain = num % 10;
+        sum = sum + remain;
+        num = num / 10;
+        ++i;
+ }
+ cout << sum;
+
+
+    
     // Using while loop to print out full triangle
     
     int i = 0;
