@@ -882,6 +882,42 @@ void lecture_9_3(){
             std::cin >> letter;
 
     }
+
+     char alph;
+
+    while ( alph != '#'){
+        std::cout << "Enter Alphabet : " << '\n';
+        std::cin >> alph;
+
+        if( alph == 'A' || alph == 'B' || alph == 'C' ){
+            std::cout << 2 << '\n';
+        }
+        else if( alph == 'D' || alph == 'E' || alph == 'F' ){
+            std::cout << 3 << '\n';
+        }
+        else if( alph == 'G' || alph == 'H' || alph == 'I' ){
+            std::cout << 4 << '\n';
+        }
+        else if( alph == 'J' || alph == 'K' || alph == 'L' ){
+            std::cout << 5 << '\n';
+        }
+        else if( alph == 'M' || alph == 'N' || alph == 'O' ){
+            std::cout << 6 << '\n';
+        }
+        else if( alph == 'P' || alph == 'Q' || alph == 'R' ){
+            std::cout << 7 << '\n';
+        }
+        else if( alph == 'S' || alph == 'T' || alph == 'U' ){
+            std::cout << 8 << '\n';
+        }
+        else if( alph == 'V' || alph == 'W' || alph == 'X' || alph == 'Y' || alph == 'Z' ){
+            std::cout << 9 << '\n';
+        }
+        else{
+            std::cout << "Invalid";
+        }
+
+    }
 }
 
 void lecture_9_4(){
