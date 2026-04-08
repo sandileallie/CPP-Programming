@@ -1283,6 +1283,72 @@ int main(){
     return 0;
 }
 
+/*
+Given length in inches, we write a program that determines and outputs the equivalent
+length in feet and (remaining) inches. Now there are 12 inches in a foot. Therefore, 100
+inches equals 8 feet and 4 inches; similarly, 55 inches equals 4 feet and 7 inches. Note
+that 100 / 12 = 8 and 100 % 12 = 4; similarly, 55 / 12 = 4 and 55 % 12 = 7. From these
+examples, it follows that we can effectively use the operators / and % to accomplish our
+task. The desired program is as follows:
+*/
+
+
+Write a program to input a Roman numerals and convert into arabic numerals
+ Roman numerals:
+ M = 1000
+ D = 500
+ C = 100
+ L = 50
+ X = 10
+ V = 5
+ I = 1
+
+// Write a program that tells you the number that you have entered is a positive numbe, if //its a negative number it returns its absolute value.
+
+// Write a program that prompts you to input 3 numbers, the program should then output the //numbers in asceding order
+
+// Bill program for Vodacom, servise code r for regular, p for premium, rate for regular is 20c if you use more than 50 minutes and 10c for premium if you use more than 75 minutes and if //use  more than 100 minutes for the night is 5c. Write a program that output how many minutes you have used and how many are lef.
+
+// write a program that add this numbers and find an average:
+// 8 9 2 3 90 38 299 7 5 8 3 9 58 26 141
+
+// a sentinel program, that when you enter -999 it exit the while loop
+// your program needs to have 5 positive intergers
+// and add all of those positive integers and return their sum
+
+// program is called telephone
+// this is a sentinel control loop, the program MUST convert uppercase letters to their //corresponding telephone digits
+
+//a program that reads an indefinite number of no-negative integers from a user and //calculates their sum,
+//a negative number (eg. -10 is used as the sentinel to terminate the loop
+
+
+//a guessing game uses a bool var isGuesed program generate an int >=0 and < 100
+    //program promts you to gues num
+    //if you guess numcorrectly program outputs appropriate message
+    //if gues num < than random num prog output  "Your guess is lower than num. Gues again"
+    //otherwise output msg: "your guess is higher than num. Gues num again"
+    //program prompts u to gues random num until u enter the correct num
+
+
+//Write a program that that determines wheter a positive int is divisible by 3 and 9
+//by first finding the sum of its difits then checkin whether the sum is divisible by 3 and 9.
+
+
+
+/*
+        Write a program that output the following output.
+        >>12345
+        >>23456
+        >>34567
+        >>45678
+        >>56789
+*/
+
+
+// Write a program that output a half star
+
+// Write a program that output a fool star
 
 
 
