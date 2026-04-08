@@ -1278,6 +1278,87 @@ void practice_02_04(){
 
 /* *********************************************************************************** PRACTICAL TEST 2025 *****************************************************************************************************************/
 
+void Initials(){
+
+   std::string Names;
+   int Age;
+   double Weight;
+
+   std::cout << "Enter your Name and Last Name : " << '\n';
+   std::getline( std::cin >> std::ws, Names);
+
+   std::cout << "Enter your Age : " << '\n';
+   std::cin >> Age;
+
+   std::cout << "Enter your Weight : " << '\n';
+   std::cin >> Weight;
+
+   std::cout << "You are " << Names << ", you are " << Age << " years old " << " and you weigh " << Weight << "kg";
+
+
+}
+
+void score(){
+
+    //Method 1
+
+    int score;
+    std::cout << "Enter score : " << '\n';
+    std::cin >> score;
+
+    if( score >= 90 && score <= 100){
+        std::cout << "Awesome" << '\n' ;
+    }
+    else if ( score >= 80 && score <= 89){
+        std::cout << "Well done" << '\n' ;
+    }
+    else if ( score >= 79 && score <= 80){
+        std::cout << "Average" << '\n' ;
+    }
+    else if ( score >= 60 && score <= 69){
+        std::cout << "Booing" << '\n' ;
+    }
+    else if ( score >= 0 && score <= 59){
+        std::cout << "Very sad" << '\n' ;
+    }
+    else{
+        std::cout << "Invalid input!!" << '\n' ;
+    }
+
+    //Method 2
+
+    int score_1;
+    std::cout << "Enter score : " << '\n';
+    std::cin >> score_1;
+
+    switch(score_1 / 10){
+        case 10:
+        case 9:
+            std::cout << "Awsome";
+            break;
+        case 8:
+            std::cout << "Weldone";
+            break;
+        case 7:
+            std::cout << "Average";
+            break;
+        case 6:
+            std::cout << "Booing";
+            break;
+        case 4:
+        case 3:
+        case 2:
+        case 1:
+            std::cout << "Very sad";
+            break;
+        default:
+            std::cout << "Invalid";
+
+
+    }
+
+}
+
 void name_age(){
     std::string Name;
     int Age;
@@ -1322,8 +1403,6 @@ void biger_or_smaller_value(){
 }
 
 void wages(){
-    
-    std::cout << std::fixed << std::showpoint << std::setprecision(2) ;
 
     double wages, rate, hours, fixed_hours = 40.0;
     std::cin >> rate
@@ -1363,6 +1442,8 @@ void range(){
     }
 
 }
+
+
 /*******************************************************************************************************************************************************************************************************************************************/
 
 
