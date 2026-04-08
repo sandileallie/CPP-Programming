@@ -1276,6 +1276,95 @@ void practice_02_04(){
     }
 }
 
+/* *********************************************************************************** PRACTICAL TEST 2025 *****************************************************************************************************************/
+
+void name_age(){
+    std::string Name;
+    int Age;
+
+    std::cout << "Enter your name : " << '\n';
+    std::cin >> Name;
+
+    std::cout << "Enter your Age : " << '\n';
+    std::cin >> Age;
+
+    std::cout << "Name : " << Name << '\n';
+    std::cout << "Age : " << Age << '\n';
+
+}
+
+void arithmetic(){
+
+
+
+    double a = 2.0, b = 3.0, c = 4.1, d = 6.4 , e = 1.1, f =2.3, g = 7.1;
+    int h = 6;
+
+    double value_1 = a * b, value_2 = c * d - e, value_3 = f/(g*h) ;
+    std::cout << "2.0*3.0 = " << value_1 << '\n';
+    std::cout << "4.1*6.4 - 1.1 = " << value_2 << '\n';
+    std::cout << "2.3/(7.1*6) = " << value_3 << '\n';
+}
+
+void biger_or_smaller_value(){
+
+    int num_1, num_2;
+    std::cout << "Enter 2 numbers : " << '\n';
+    std::cin >> num_1 >> num_2;
+
+    if ( num_1 > num_2){
+        std::cout << "Bigger : " << num_1;
+    }
+    else{
+        std::cout << "Bigger : " << num_2;
+    }
+
+}
+
+void wages(){
+    
+    std::cout << std::fixed << std::showpoint << std::setprecision(2) ;
+
+    double wages, rate, hours, fixed_hours = 40.0;
+    std::cin >> rate
+             >> hours;
+
+    if(hours > 40.0){
+        wages = fixed_hours*rate + 1.5*rate*(hours - fixed_hours);
+        std::cout << "Wages : " << wages;
+    }
+    else{
+        wages = hours*rate;
+        std::cout << "Wages : " << wages;
+    }
+
+}
+
+void range(){
+
+    int number;
+    std::cout << "Enter a number between 0 and 7 : " << '\n';
+    std::cin >> number;
+
+    switch(number){
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+        case 7:
+            std::cout << number << " Is in range ";
+            break;
+        default:
+            std::cout << number << " Is not in range ";
+
+    }
+
+}
+/*******************************************************************************************************************************************************************************************************************************************/
+
 
 
 
@@ -1306,7 +1395,13 @@ int main(){
    //lecture_11();
    //lecture_11_1();
    //lecture_11_2();
-   lecture_11_3();
+   //lecture_11_3();
+    //score();
+    //name_age();
+    //arithmetic();
+    //biger_or_smaller_value();
+    //void wages();
+    //range();
 
 
     return 0;
