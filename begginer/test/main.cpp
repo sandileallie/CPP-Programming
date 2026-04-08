@@ -1,28 +1,62 @@
 #include <iostream>
 #include <cstdlib>
+#include <cmath>
 
-using namespace std;
+void abso(){
+
+    // Write a program that tells you the number that you have entered is a positive numbe, if its a negative number it returns its absolute value.
+
+    int number;
+    std::cout << "Enter an interger : " << '\n';
+    std::cin >> number;
+
+    if (number > 0){
+        std::cout << "You have entered a positve number : " << number << '\n';
+    }
+    else{
+        std::cout << "The number you have entered is a negative number and its abs is " << abs(number);
+    }
+
+}
+
+
+void asce(){
+
+    // Write a program that prompts you to input 3 numbers, the program should then output the numbers in asceding order
+
+    int num_1, num_2, num_3;
+    std::cout << "Enter 3 numbers : " << '\n';
+    std::cin >> num_1
+             >> num_2
+             >> num_3;
+
+    if (num_1 < num_2 && num_2 < num_3){
+        std::cout << num_1 << " " << num_2 << " " << num_3 << '\n';
+    }
+    else if(num_1 > num_2 && num_2 > num_3){
+        std::cout << num_3 << " " << num_2 << " " << num_1 << '\n';
+    }
+    else if(num_1 < num_2  && num_2 > num_3 && num_1 > num_3){
+        std::cout << num_3 << " " << num_1 << " " << num_2 << '\n';
+    }
+    else if(num_1 < num_2  && num_2 > num_3 && num_3 > num_1){
+        std::cout << num_1 << " " << num_3 << " " << num_2 << '\n';
+    }
+    else if(num_1 > num_2  && num_2 < num_3 && num_3 > num_1){
+        std::cout << num_2 << " " << num_1 << " " << num_3 << '\n';
+    }
+    else if(num_1 > num_2  && num_2 < num_3 && num_3 > num_1){
+        std::cout << num_2 << " " << num_3 << " " << num_1 << '\n';
+    }
+
+}
+
+
 
 int main()
 {
-     for(int i =1; i<=5 ; i++){
-            for(int j=i; j < i + 5; j++){
-                cout << j;
-                /*
-                    value: j = 1; 1 < 6;
-                           j = 2; 2 < 7;
-                           j = 3; 3 < 8;
-                           j = 4; 4 < 9;
-                           j = 5; 5 < 10;
-                    output: 12345, 23456, 34567, 45678, 56789;
 
-
-                */
-            }
-
-        cout <<'\n' ;
-    }
-
+    asce();
 
     return 0;
 }

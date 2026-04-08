@@ -555,6 +555,8 @@ void ascending_order_lecture_7(){
 
     // Write a program that prompts you to input 3 numbers, the program should then output the numbers in asceding order
 
+    //Method 1
+
     int num1, num2, num3;
     std::cout << "Enter 3 numbers :";
     std::cin >> num1
@@ -586,6 +588,33 @@ void ascending_order_lecture_7(){
             else if (num3 > num1){
                 std::cout << num2 << " " << num1 << " " << num3;
             }
+    }
+
+    //Method 2
+
+    int num_1, num_2, num_3;
+    std::cout << "Enter 3 numbers : " << '\n';
+    std::cin >> num_1
+             >> num_2
+             >> num_3;
+
+    if (num_1 < num_2 && num_2 < num_3){
+        std::cout << num_1 << " " << num_2 << " " << num_3 << '\n';
+    }
+    else if(num_1 > num_2 && num_2 > num_3){
+        std::cout << num_3 << " " << num_2 << " " << num_1 << '\n';
+    }
+    else if(num_1 < num_2  && num_2 > num_3 && num_1 > num_3){
+        std::cout << num_3 << " " << num_1 << " " << num_2 << '\n';
+    }
+    else if(num_1 < num_2  && num_2 > num_3 && num_3 > num_1){
+        std::cout << num_1 << " " << num_3 << " " << num_2 << '\n';
+    }
+    else if(num_1 > num_2  && num_2 < num_3 && num_3 > num_1){
+        std::cout << num_2 << " " << num_1 << " " << num_3 << '\n';
+    }
+    else if(num_1 > num_2  && num_2 < num_3 && num_3 > num_1){
+        std::cout << num_2 << " " << num_3 << " " << num_1 << '\n';
     }
 
 }
@@ -1209,7 +1238,7 @@ void practice_02_04(){
         else{
             cout << "You owe : " << 'R' << abs(amount_left);
         }
-    } 
+    }
 
 
 
@@ -1227,9 +1256,9 @@ void practice_02_04(){
  cout << sum;
 
 
-    
+
     // Using while loop to print out full triangle
-    
+
     int i = 0;
     while( i < 5){
         cout << '\n';
