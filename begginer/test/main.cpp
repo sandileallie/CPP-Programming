@@ -51,12 +51,27 @@ void asce(){
 
 }
 
+void stare(){
+
+for (int i = 0; i <= 5 ; ++i){
+    for (int y = 0; y <= 6-i ; ++y){
+        std::cout << " ";
+    }
+    for (int z = 0; z <= i; ++z){
+        std::cout << z << " ";
+    }
+    std::cout << '\n';
+}
+
+}
+
 
 
 int main()
 {
 
-    asce();
+    //asce();
+    stare();
 
     return 0;
 }
