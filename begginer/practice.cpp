@@ -1192,51 +1192,51 @@ void practice_02_04(){
     int min_used, min_used_day, min_used_night, account_num;
     char code;
 
-    cout << "Enter account number : " << '\n' ;
-    cin >> account_num;
-    cout << "Enter service code : " << '\n';
-    cin >> code;
+    std::cout << "Enter account number : " << '\n' ;
+    std::cin >> account_num;
+    std::cout << "Enter service code : " << '\n';
+    std::cin >> code;
 
     if(code == 'r'){
-        cout << "Enter number of minutes used : " << '\n';
-        cin >> min_used ;
-        cout << "You have used " << min_used << " Minutes " << '\n';
+        std::cout << "Enter number of minutes used : " << '\n';
+        std::cin >> min_used ;
+        std::cout << "You have used " << min_used << " Minutes " << '\n';
 
         int num_min_used = 50 - min_used;
         double charged_amount = num_min_used*0.20;
         double amount_left = 100 - abs(charged_amount);
 
         if(min_used < 50){
-            cout << "Amount left : " << "R100" << '\n';
+            std::cout << "Amount left : " << "R100" << '\n';
         }
         else if(min_used > 50 && amount_left > 0 && amount_left < 100){
-            cout << "Amount left : " << 'R' <<amount_left << '\n';
+            std::cout << "Amount left : " << 'R' <<amount_left << '\n';
         }
         else{
-            cout << "You owe : " << 'R' << abs(amount_left) << '\n';
+            std::cout << "You owe : " << 'R' << abs(amount_left) << '\n';
         }
     }
 
     else if( code == 'p'){
-        cout << "Enter number of minutes : " << '\n';
-        cin >> min_used_day ;
-        cout << "You have used " << min_used_day << " minutes during the day " << '\n';
-        cout << "Enter number of minutes usded at night : " << '\n';
-        cin >> min_used_night ;
-        cout << "You have used " << min_used_night << " minutes at night " << '\n';
+        std::cout << "Enter number of minutes : " << '\n';
+        std::cin >> min_used_day ;
+        std::cout << "You have used " << min_used_day << " minutes during the day " << '\n';
+        std::cout << "Enter number of minutes usded at night : " << '\n';
+        std::cin >> min_used_night ;
+        std::cout << "You have used " << min_used_night << " minutes at night " << '\n';
 
         int num_min_used = 75 - min_used_day, num_min_used_n = 100 - min_used_night;
         double charges_d = abs(num_min_used*0.10), charges_n = abs(num_min_used_n*0.05);
         double amount_left = 120 - (charges_d + charges_n);
 
         if(min_used_day < 75 && min_used_night < 100){
-            cout << "Amount left : " << "R100" << '\n';
+            std::cout << "Amount left : " << "R100" << '\n';
         }
         else if (min_used_day > 75 && min_used_night > 100 && amount_left>0 && amount_left < 120){
-            cout << "Amount left : " << amount_left << '\n';
+            std::cout << "Amount left : " << amount_left << '\n';
         }
         else{
-            cout << "You owe : " << 'R' << abs(amount_left);
+            std::cout << "You owe : " << 'R' << abs(amount_left);
         }
     }
 
@@ -1253,24 +1253,24 @@ void practice_02_04(){
         num = num / 10;
         ++i;
  }
- cout << sum;
+ std::cout << sum;
 
 
 
     // Using while loop to print out full triangle
 
-    int i = 0;
-    while( i < 5){
-        cout << '\n';
-        ++i;
-        int j = i;
+    int z = 0;
+    while( z < 5){
+        std::cout << '\n';
+        ++z;
+        int j = 0;
         int y = 6-i;
         while ( j < 6){
-            cout << " " ;
+            std::cout << " " ;
             ++j;
         }
         while( y < 6){
-            cout << y << " ";
+            std::cout << y << " ";
             y++;
         }
     }
@@ -1384,7 +1384,7 @@ void arithmetic(){
     double value_1 = a * b, value_2 = c * d - e, value_3 = f/(g*h) ;
     std::cout << "2.0*3.0 = " << value_1 << '\n';
     std::cout << "4.1*6.4 - 1.1 = " << value_2 << '\n';
-    std::cout << "2.3/(7.1*6) = " << value_3 << endl;
+    std::cout << "2.3/(7.1*6) = " << value_3 << '\n';
 }
 
 void biger_or_smaller_value(){
@@ -1447,6 +1447,31 @@ void range(){
 /*******************************************************************************************************************************************************************************************************************************************/
 
 
+void lecture_12_1(){
+
+    // Write a program that prompts a user to input an integer and then output the number with the digit reversed
+    // eg if input is 12345 output should be 54321.
+    // you program should must also output 500 as 0005 and 980 as 089
+
+    // string s = to_string(int);
+
+    int integer ;
+    std::cout << "Enter an integer : " << '\n';
+    std::cin >> integer;
+    std::string Integer = to_string(integer);
+
+    int i = 0;
+
+    while(i , i < 5){
+        ++i;
+        std::cout << Integer[5-i] ;
+    }
+
+    // Second way
+    // reverse(<string_name>.begin(), <string_name>.end()) . Need to add #include <algorithm>
+
+}
+
 
 
 int main(){
@@ -1483,6 +1508,7 @@ int main(){
     //biger_or_smaller_value();
     //void wages();
     //range();
+    lecture_12_1();
 
 
     return 0;
@@ -1498,7 +1524,7 @@ task. The desired program is as follows:
 */
 
 
-Write a program to input a Roman numerals and convert into arabic numerals
+/*Write a program to input a Roman numerals and convert into arabic numerals
  Roman numerals:
  M = 1000
  D = 500
@@ -1506,7 +1532,7 @@ Write a program to input a Roman numerals and convert into arabic numerals
  L = 50
  X = 10
  V = 5
- I = 1
+ I = 1 */
 
 // Write a program that tells you the number that you have entered is a positive numbe, if //its a negative number it returns its absolute value.
 
