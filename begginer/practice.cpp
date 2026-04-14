@@ -1458,7 +1458,7 @@ void lecture_12_1(){
     int integer ;
     std::cout << "Enter an integer : " << '\n';
     std::cin >> integer;
-    std::string Integer = to_string(integer);
+    std::string Integer = std::to_string(integer);
 
     int i = 0;
 
@@ -1469,6 +1469,37 @@ void lecture_12_1(){
 
     // Second way
     // reverse(<string_name>.begin(), <string_name>.end()) . Need to add #include <algorithm>
+
+}
+
+// lecture_12_2
+// User defined functions
+
+double larger( double x, double y){
+
+    if(x >= y){
+        return x;
+    }
+    else{
+        return y;
+    }
+}
+
+double compare_3(double x, double y, double z){
+    return larger(x, larger(y,z));
+}
+
+void largerst_numbers(){ // This program is the continuation of lecture 12_2
+
+    double a, b, c, d, e;
+    std::cout << "Enter Two integers : " << '\n';
+    std::cin >> a >> b ;
+    std::cout << "Largest : " << larger(a, b) << '\n';
+
+    std::cout << "Enter 3 integers : " << '\n';
+    std::cin >> c >> d >> e;
+    std::cout << "Largest : " << compare_3(c, d, e) << '\n';
+
 
 }
 
@@ -1508,7 +1539,8 @@ int main(){
     //biger_or_smaller_value();
     //void wages();
     //range();
-    lecture_12_1();
+    //lecture_12_1();
+    largerst_numbers();
 
 
     return 0;
