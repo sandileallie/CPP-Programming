@@ -1489,7 +1489,7 @@ double compare_3(double x, double y, double z){
     return larger(x, larger(y,z));
 }
 
-void largerst_numbers(){ // This program is the continuation of lecture 12_2
+void largerst_numbers(){ // This function is the continuation of lecture 12_2
 
     double a, b, c, d, e;
     std::cout << "Enter Two integers : " << '\n';
