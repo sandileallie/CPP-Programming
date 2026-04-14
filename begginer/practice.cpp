@@ -1384,7 +1384,7 @@ void arithmetic(){
     double value_1 = a * b, value_2 = c * d - e, value_3 = f/(g*h) ;
     std::cout << "2.0*3.0 = " << value_1 << '\n';
     std::cout << "4.1*6.4 - 1.1 = " << value_2 << '\n';
-    std::cout << "2.3/(7.1*6) = " << value_3 << '\n';
+    std::cout << "2.3/(7.1*6) = " << value_3 << endl;
 }
 
 void biger_or_smaller_value(){
