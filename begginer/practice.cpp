@@ -1500,8 +1500,66 @@ void largerst_numbers(){ // This function is the continuation of lecture 12_2
     std::cin >> c >> d >> e;
     std::cout << "Largest : " << compare_3(c, d, e) << '\n';
 
+}
+
+//                                              ***PRACTICE***
+
+double greate(double x, double y){
+    if(x > y){
+        return x;
+    }
+    else{
+        return y;
+    }
+}
+
+double great_2(double z, double a, double b){
+
+    return greate(z, greate(a,b));
 
 }
+
+int die_roll(int num){
+
+    int die_1;
+    int die_2;
+    int sum;
+    int roll_count = 0;
+
+    srand(time(0));
+
+    do{
+    die_1 = rand() % 6 +1;
+    die_2 = rand() % 6 +1;
+    sum = die_1 + die_2;
+    roll_count++;
+    }
+    while( sum != num);
+
+    return roll_count;
+
+    /*
+               ***Paste this on the main function to get your results***
+    int num;
+    std::cout << "Number of times : " << '\n';
+    std::cin >> num;
+
+    std::cout << "Number of times the diec are rolled to get " << num << ": " <<die_roll(num);
+    */
+
+}
+
+void loop(){
+
+    int num = 1, counter = 7;
+
+    while(num < 20, num != counter){
+        std::cout << num << '\n';
+        num++;
+    }
+}
+
+//                                              END OF PRACTICCE
 
 
 
