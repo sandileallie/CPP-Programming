@@ -1563,6 +1563,65 @@ void loop(){
 
 
 
+//                                              ***LECTURE 13***
+
+    /*
+    Write a alue return funct that returns only one value even if the return statement contains  more than one expres
+    int doCode1();
+    int doCode2();
+    inr doCode3();
+        return 23, y, 3*6
+    inr doCode4(int h);
+        return 5*k + 1, h + 1;
+    */
+
+int doCode1(){
+
+    int x , y ;
+
+    return y , x ;
+
+}
+
+int doCode2(){
+
+    int x = 3, z = 5;
+
+    int sum = x + z;
+    int product = x*z;
+
+    return product, sum;
+
+}
+
+int doCode3(){
+
+    int p , y;
+
+    return 23, y, 3*p;
+}
+
+int doCode4(int h){
+
+    int k ;
+    return 5 * k, k+1, h + 1;
+
+}
+
+
+string verification(string bloodType){ // Blood type function
+
+    if (bloodType == "O" || bloodType == "A" || bloodType == "B" || bloodType == "AB"){
+
+        return "You are a human\n";
+    }
+
+    else{
+        return "You are not a human\n";
+    }
+
+}
+
 int main(){
 
    // practice();
