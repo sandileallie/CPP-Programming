@@ -1472,8 +1472,9 @@ void lecture_12_1(){
 
 }
 
-// lecture_12_2
-// User defined functions
+//                                              ***LECTURE_12_2***
+
+//                                            USER DEFINED FUNCTIONS
 
 double larger( double x, double y){
 
@@ -1501,6 +1502,8 @@ void largerst_numbers(){ // This function is the continuation of lecture 12_2
     std::cout << "Largest : " << compare_3(c, d, e) << '\n';
 
 }
+
+
 
 //                                              ***PRACTICE***
 
@@ -1549,6 +1552,8 @@ int die_roll(int num){
 
 }
 
+
+
 void loop(){
 
     int num = 1, counter = 7;
@@ -1560,6 +1565,9 @@ void loop(){
 }
 
 //                                              END OF PRACTICCE
+
+
+
 
 
 
@@ -1608,8 +1616,7 @@ int doCode4(int h){
 
 }
 
-
-string verification(string bloodType){ // Blood type function
+std::string verification(std::string bloodType){ // Blood type function
 
     if (bloodType == "O" || bloodType == "A" || bloodType == "B" || bloodType == "AB"){
 
@@ -1622,25 +1629,28 @@ string verification(string bloodType){ // Blood type function
 
 }
 
-//                                                ***LECTURE 13***
 
-voide palindrome(){
-    string str;
-    cout << "Enter a palindrome number : ";
-    cin >> str;
+
+
+//                                                ***LECTURE 14***
+
+bool palindrome(){
+    std::string str;
+    std::cout << "Enter a palindrome number : ";
+    std::cin >> str;
     int length = str.length();
 
     for(int i = 0; i < length / 2; ++i){
         if(str[i] != str[length - 1 - i]){
-            cout << "It is not a palidrone";
+            std::cout << "It is not a palidrone";
             return false;
         }
         else{
-            cout << "It is a palindrome";
+            std::cout << "It is a palindrome";
             return true;
     }
     }
-    
+
 }
 
 int secret(int one){
@@ -1655,28 +1665,28 @@ int secret(int one){
 
         /*                ***INPUTE THIS ON THE MAIN FUNCTION TO GET YOUR OUTPUT***
 
-        // What is the output of the following and also what does the function secret() do?
+        What is the output of the following and also what does the function secret() do?
         cout << secret(5) << '\n';
         cout << 2 * secret(6) << '\n';
-        
+
         */
     }
 }
 
 int doubleGame(int x){
-    
+
     return x * 2;
 
-}
+    /*                      ***INPUTE THIS ON THE MAIN FUNCTION TO GET YOUR OUTPUT***
 
-
-int main()
-{
     for(int i ; i <= 5; i++){
-        cout << "Double of " << i << " is " << doubleGame(i);
+        cout << "Double of " << i << " is " << doubleGame(i);  //What is the output of this for loop?
     }
     return 0;
+
+    */
 }
+
 
 
 int main(){
@@ -1714,78 +1724,13 @@ int main(){
     //void wages();
     //range();
     //lecture_12_1();
-    largerst_numbers();
+    //largerst_numbers();
 
 
     return 0;
 }
 
-/*
-Given length in inches, we write a program that determines and outputs the equivalent
-length in feet and (remaining) inches. Now there are 12 inches in a foot. Therefore, 100
-inches equals 8 feet and 4 inches; similarly, 55 inches equals 4 feet and 7 inches. Note
-that 100 / 12 = 8 and 100 % 12 = 4; similarly, 55 / 12 = 4 and 55 % 12 = 7. From these
-examples, it follows that we can effectively use the operators / and % to accomplish our
-task. The desired program is as follows:
-*/
 
-
-/*Write a program to input a Roman numerals and convert into arabic numerals
- Roman numerals:
- M = 1000
- D = 500
- C = 100
- L = 50
- X = 10
- V = 5
- I = 1 */
-
-// Write a program that tells you the number that you have entered is a positive numbe, if //its a negative number it returns its absolute value.
-
-// Write a program that prompts you to input 3 numbers, the program should then output the //numbers in asceding order
-
-// Bill program for Vodacom, servise code r for regular, p for premium, rate for regular is 20c if you use more than 50 minutes and 10c for premium if you use more than 75 minutes and if //use  more than 100 minutes for the night is 5c. Write a program that output how many minutes you have used and how many are lef.
-
-// write a program that add this numbers and find an average:
-// 8 9 2 3 90 38 299 7 5 8 3 9 58 26 141
-
-// a sentinel program, that when you enter -999 it exit the while loop
-// your program needs to have 5 positive intergers
-// and add all of those positive integers and return their sum
-
-// program is called telephone
-// this is a sentinel control loop, the program MUST convert uppercase letters to their //corresponding telephone digits
-
-//a program that reads an indefinite number of no-negative integers from a user and //calculates their sum,
-//a negative number (eg. -10 is used as the sentinel to terminate the loop
-
-
-//a guessing game uses a bool var isGuesed program generate an int >=0 and < 100
-    //program promts you to gues num
-    //if you guess numcorrectly program outputs appropriate message
-    //if gues num < than random num prog output  "Your guess is lower than num. Gues again"
-    //otherwise output msg: "your guess is higher than num. Gues num again"
-    //program prompts u to gues random num until u enter the correct num
-
-
-//Write a program that that determines wheter a positive int is divisible by 3 and 9
-//by first finding the sum of its difits then checkin whether the sum is divisible by 3 and 9.
-
-
-
-/*
-        Write a program that output the following output.
-        >>12345
-        >>23456
-        >>34567
-        >>45678
-        >>56789
-*/
-
-
-// Write a program that output a half star
-
-// Write a program that output a fool star
 
 
 
