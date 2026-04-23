@@ -67,11 +67,89 @@ for (int i = 0; i <= 5 ; ++i){
 
 
 
+}
+
+void random(){
+
+   int num_1, num_2;
+
+   srand(time(0));
+
+   num_1 = rand() % 6 + 1;
+   num_2 = rand() % 10;
+
+   std::cout << num_1 << '\n';
+   std::cout << num_2;
+
+
+}
+
+void roll(){
+
+    int die_1, die_2, sum = 0, total_role = 0, num  = 0;
+
+    srand(time(0));
+
+    do{
+        die_1 = rand() % 7;
+        die_2 = rand() % 7;
+        sum = die_1 + die_2;
+        total_role++;
+    }while( sum != num);
+
+    std::cout << "You rolled : " << total_role ;
+
+}
+
+
+void authentication(){
+
+    int generated_code, code, increment, index_1, index_2;
+    std::string OTP;
+
+    srand(time(0));
+    increment = rand() % 9000;
+    generated_code = (rand() % 1001) + increment;
+    index_1 = rand() % 24 + 1;
+    index_2 = rand() % 24 + 1;
+
+    std::string alpha_1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    std::string alpha_2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    std::string verification_code = alpha_1[index_1]+std::to_string(generated_code)+alpha_2[index_2];
+
+
+    std::cout << "Your verification code is : " << verification_code << '\n';
+
+    std::cout << '\n';
+
+    std::cout << "Enter the code on your display STARTING WITH THE FIRST LETTER FOLLOWED BY THE INTEGER AND LAST LETTER : " << '\n';
+    std::cin >> OTP;
+
+    if(OTP == verification_code){
+        std::cout << "authentication successful!!! You are a human";
+    }
+    else{
+        std::cout << "authentication not successfull!!! You are not a human";
+    }
+
+}
+
+
+void cast(){
+
+    int x = 100;
+    std::string num = std::to_string(x);
+
+    std::cout << num;
+
+}
+
+
 int main()
 {
 
-    //asce();
-    stare();
+    authentication();
+    //cast();
 
     return 0;
 }
