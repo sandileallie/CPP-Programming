@@ -1622,6 +1622,63 @@ string verification(string bloodType){ // Blood type function
 
 }
 
+//                                                ***LECTURE 13***
+
+voide palindrome(){
+    string str;
+    cout << "Enter a palindrome number : ";
+    cin >> str;
+    int length = str.length();
+
+    for(int i = 0; i < length / 2; ++i){
+        if(str[i] != str[length - 1 - i]){
+            cout << "It is not a palidrone";
+            return false;
+        }
+        else{
+            cout << "It is a palindrome";
+            return true;
+    }
+    }
+    
+}
+
+int secret(int one){
+
+    int i;
+    int prod = 1;
+
+    for(i = 0; i <= 3; i++){
+        prod = prod * one;
+
+        return prod;
+
+        /*                ***INPUTE THIS ON THE MAIN FUNCTION TO GET YOUR OUTPUT***
+
+        // What is the output of the following and also what does the function secret() do?
+        cout << secret(5) << '\n';
+        cout << 2 * secret(6) << '\n';
+        
+        */
+    }
+}
+
+int doubleGame(int x){
+    
+    return x * 2;
+
+}
+
+
+int main()
+{
+    for(int i ; i <= 5; i++){
+        cout << "Double of " << i << " is " << doubleGame(i);
+    }
+    return 0;
+}
+
+
 int main(){
 
    // practice();
