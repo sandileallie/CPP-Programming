@@ -438,7 +438,49 @@ void for_loop(){
     }
 }
 
+void arrays(){
 
+    std::string strings[5] = {"String_1", "String_2", "String_3", "String_4", "String_5"};
+
+    //Accessing the element of an array
+    std::cout << "The value of the first element : " << strings[0] << '\n' ;
+
+    //Change an array element
+    strings[4] = "String_6";
+    std::cout << "The value of the last element : " << strings[4] << '\n' ;
+
+    //Geting the size of an array
+    // -The 'sizeof(<array_name>)' function give us the total number of bytes in our array
+    // -To get the number of values in our arrays we need to divide by the bytes of the data type we have used for our array
+    // -Since we used a string which has 32 bytes, we can divide by 32, but we can use the function 'sizeof(<array_name>[0])' to get bytes of the first value
+    std::cout << "The sise of strings is : " << sizeof(strings)/sizeof(strings[0]) << '\n' ;
+
+    //Getting an index of a value on an array
+    // -The first statement will give you the address of the value you want to find the index of
+    // -The secod statement will find the difference between the address of the value want index of and the address of the first value and convert it into an int type
+    auto address = std::find(std::begin(strings), std::end(strings), "String_3");
+    int index = address - std::begin(strings);
+    std::cout << "The Index of String_3 is : " << index << '\n' ;
+
+}
+
+void populate_array(){
+
+        //Populating an array using a while loop
+
+    int i = 0;
+    std::string num[5], String;
+
+    while(i <= 4){
+
+        std::cout << "Enter string : " ;
+        std::cin >> String;
+        num[i] = String;
+        i++;
+    }
+    std::cout << '\n';
+    std::cout << num[3] << '\n';
+}
 
 
 
@@ -463,57 +505,9 @@ int main(){
 //find_value_array();
 //for_loop();
 //roman_to_num();
-iomanip();
-
-
-
-
+//iomanip();
+//arrays();
+populate_array();
 
     return 0;
 }
-
-
-
-
-
-
-
-/*
-
-Chapter 1
-    #Elements of computer system(6)
-    #Central processing unit(CPU)
-    #CPU & main memory
-    #Secondary storage
-    #I/O device
-    #Software and application program
-    #The language of a computer
-    #Define: Analog signal, machin language, binary digit(bit), binary code, byte, ASCII
-
-
-Chapter 2
-    #Basic elements of cpp(Variable, Function)
-    #Comments(Single line, Multinine Comments)
-    #Special symboles()
-    #Reserved Words
-    #Identifiers
-    #Whitespace
-    #Data types
-    #Data types, variables, and assignment statement
-    #Arithmetic operators, operator presidence, and expressions
-    #Expressions
-    #Type conversion(Casting)
-    #String Type
-    #Alocating memory with constant variables
-    #Puting data into variables
-    #Declaring and initializing variable
-    #Input and Output
-    #Increment and Decrement operators
-    #Preprocessor Directives
-    #Namespace and using 'cin' and 'cout' in a program
-    #Using the string Data type in a program
-    #Creating a cpp program
-
-
-
-*/
