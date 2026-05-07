@@ -1687,6 +1687,71 @@ int doubleGame(int x){
     */
 }
 
+int week_seconds(){
+
+    // Convert days to hours
+    //         hours to minutes
+    //         Minutes to seconds
+
+
+    int Second = 60;
+    int Hour_to_seconds = 60* Second;
+    int Day_to_seconds = Hour_to_seconds * 60;
+    int Week_to_seconds = Day_to_seconds * 60;
+
+    cout << "1 week = " << Week_to_seconds << 's' ;
+
+}
+
+int arithmetic(){
+
+    int divide = 15 % 4 ;
+    int moduluss = 15 % 4;
+    int mixed = 5*3-(6*4);
+
+    cout << "divide = " << divide << '\n';
+    cout << "modulus = " << moduluss << '\n';
+    cout << "mixed = " << mixed << '\n';
+
+}
+
+int int_truncation(){
+
+    cout << "Answer1 is the integer " << 9/4
+         << "\nanswer2 is integer " << 17/3 << '\n';
+
+}
+
+int odd_even(){
+
+    int num;
+    cout << "Enter an integer : " << '\n';
+    cin >> num;
+
+    if( num % 2 == 0){
+        cout << num << " is even";
+    }
+    else{
+        cout << num << " is odd";
+    }
+}
+
+int mult_table(){
+    //code that generate a multiplication table for a given number
+
+    int num;
+    cout << "Enter a number : " << '\n';
+    cin >> num;
+    cout << "multles of " << num << " Are" <<'\n';
+
+    for(int i = 1; i < num ; ++i){
+        int multiples_of = i*num;
+        cout << multiples_of << '\n';
+    }
+
+}
+
+
 
 
 int main(){
