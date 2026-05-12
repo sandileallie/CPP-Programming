@@ -1751,6 +1751,222 @@ int mult_table(){
 
 }
 
+//                                                ***LECTURE 15***
+void prime_num(){
+    //Write a program that let you input a an int and the output it should tell you wheter it is a a prime number or not
+    
+}
+
+
+void telephone(){
+    //telephone digits that wheter you enter a upercase or lowercase it gives you a corresponding number of that letter
+   char alphabet;
+
+   while(alphabet != '#'){
+            cout << "Enter a alphabet : " << '\n';
+            cin >> alphabet;
+
+        if(alphabet >= 'A' && alphabet <= 'Z'){
+            switch(alphabet){
+                case 'A':
+                case 'B':
+                case 'C':
+                case 'a':
+                case 'b':
+                case 'c':
+                    cout << 1;
+                    break;
+                case 'D':
+                case 'E':
+                case 'F':
+                case 'd':
+                case 'e':
+                case 'f':
+                    cout << 2;
+                    break;
+                case 'G':
+                case 'H':
+                case 'I':
+                case 'g':
+                case 'h':
+                case 'i':
+                    cout << 3;
+                    break;
+                case 'J':
+                case 'K':
+                case 'L':
+                case 'j':
+                case 'k':
+                case 'l':
+                    cout << 4;
+                    break;
+                case 'M':
+                case 'N':
+                case 'O':
+                case 'm':
+                case 'n':
+                case 'o':
+                    cout << 5;
+                    break;
+                case 'P':
+                case 'Q':
+                case 'R':
+                case 'p':
+                case 'q':
+                case 'r':
+                    cout << 6;
+                    break;
+                case 'S':
+                case 'T':
+                case 'U':
+                case 's':
+                case 't':
+                case 'u':
+                    cout << 7;
+                    break;
+                case 'V':
+                case 'W':
+                case 'X':
+                case 'v':
+                case 'w':
+                case 'x':
+                    cout << 8;
+                    break;
+                case 'Y':
+                case 'Z':
+                case 'y':
+                case 'z':
+
+                    cout << 9;
+                    break;
+            }
+
+        }
+        else{
+            cout << "Invalid output ";
+        }
+
+
+   }
+}
+
+void fals_calculator(){
+    //Write a program that mimics a calculater and displayes your equation and its unswer
+    int num1, num2;
+   char operatore ;
+   cout << "Enter first number : " << '\n';
+   cin >> num1;
+   cout << "Enter first number : " << '\n';
+   cin >> num2;
+   cout << "Enter operator you want to perfom eg. +,-,*,/,% : " << '\n';
+   cin >> operatore ;
+
+   if(operatore == '+'){
+        int sum = num1 + num2;
+        cout << num1 << " " << "+ " << num2 << " = " << sum;
+   }
+   else if(operatore == '-'){
+        int diff = num1 - num2;
+        cout << num1 << " " << "- " << num2 << " = " << diff;
+   }
+   else if(operatore == '*'){
+        int mult = num1 * num2;
+        cout << num1 << " " << "* " << num2 << " = " << mult;
+   }
+   else if(operatore == '/'){
+        float div = double(num1) / double(num2);
+        cout << num1 << " " << "/ " << num2 << " = " << div;
+   }
+
+   else if(operatore == '%'){
+        int mod = num1 % num2;
+        cout << num1 << " " << "% " << num2 << " = " << mod;
+   }
+}
+
+void coordinate_system(){
+    //write a program that prompt a user to input the x-y coordinate of a point in a cartesian pane.
+    //shoult then output a message indicating whether the point is origin,x or y axis, or aa quadrant
+
+    int x, y;
+    cout << "Enter x value : " << '\n';
+    cin >> x;
+    cout << "Enter y value : " << '\n';
+    cin >> y;
+
+    if(y == 0 && x > 0){
+        cout << "X-axis";
+    }
+    else if( x == 0 && y > 0){
+        cout << "Y-axis";
+    }
+    else if( x == 0 && y == 0){
+        cout << "Origin";
+    }
+    else if( x > 0 && y > 0){
+        cout << "First quadrant";
+    }
+    else if( x < 0 && y > 0){
+        cout << "Second quadrant";
+    }
+    else if( x < 0 && y < 0){
+        cout << "Third quadrant";
+    }
+    else if( x > 0 && y < 0){
+        cout << "Fourth quadrant";
+    }
+
+}
+
+void service(){
+// a bank updates customers account at the end of each mont bank offers two types of accounts:
+//savings and cheque, every customer must maintain a min balance, if customer balance fall below min balance,
+//there's a service charge of R25 for savings account and R35 for cheque acc, if balance at the end of the month is at least the min balance,
+//the account recieves intrest
+//savings account 4% intrest
+//cheque wit bal of up to R3000 more than the min balance recieve 5% otherwise intrest is 6%
+//write a program that reads a customer account number, account type(s for savings and c for cheque),
+//min bal a acc should maintain, and current bal, and appropriate message.
+
+    int acc_num, balance;
+    double min_bal_s = 100, min_bal_c = 200;
+    char s_code;
+
+    cout << "Enter account number : " << '\n';
+    cin >> acc_num;
+    cout << "Enter service code s for saving and c for ceque " << '\n';
+    cin >> s_code;
+    cout << "Enter amout" << '\n';
+    cin >> balance;
+
+    if(s_code == 's'){
+        if(balance > min_bal_s){
+            double intrest_r = balance*0.04;
+            double new_ama = balance + intrest_r - 25;
+            cout << "Savings account : Your account should maintain minimum of R" << '\n';
+            cout << "current balance : " << 'R' << new_ama << '\n';
+            cout << "Thank you for using our service!!!";
+        }
+    else if(s_code == 'c'){
+        if(balance > 3000 && balance > min_bal_c){
+            double intrest_r = balance*0.05;
+            double new_ama = balance + intrest_r - 35;
+            cout << "ceque account : Your account should maintain minimum of R25" << '\n';
+            cout << "current balance : " << 'R' << new_ama << '\n';
+            cout << "Thank you for using our service!!!";
+            }
+        else if(balance > min_bal_c){
+            double intrest_r = balance*0.06;
+            double new_ama = balance + intrest_r - 35;
+            cout << "ceque account : Your account should maintain minimum of R25" << '\n';
+            cout << "current balance : " << 'R' << new_ama << '\n';
+            cout << "Thank you for using our service!!!";
+            }
+
+    }
+
+    
+}
 
 
 
