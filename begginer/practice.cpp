@@ -1699,25 +1699,26 @@ int week_seconds(){
     int Day_to_seconds = Hour_to_seconds * 60;
     int Week_to_seconds = Day_to_seconds * 60;
 
-    cout << "1 week = " << Week_to_seconds << 's' ;
+    std::cout << "1 week = " << Week_to_seconds << 's' ;
 
 }
 
+/*
 int arithmetic(){
 
     int divide = 15 % 4 ;
     int moduluss = 15 % 4;
     int mixed = 5*3-(6*4);
 
-    cout << "divide = " << divide << '\n';
-    cout << "modulus = " << moduluss << '\n';
-    cout << "mixed = " << mixed << '\n';
+    std::cout << "divide = " << divide << '\n';
+    std::cout << "modulus = " << moduluss << '\n';
+    std::cout << "mixed = " << mixed << '\n';
 
-}
+} */
 
 int int_truncation(){
 
-    cout << "Answer1 is the integer " << 9/4
+    std::cout << "Answer1 is the integer " << 9/4
          << "\nanswer2 is integer " << 17/3 << '\n';
 
 }
@@ -1725,14 +1726,14 @@ int int_truncation(){
 int odd_even(){
 
     int num;
-    cout << "Enter an integer : " << '\n';
-    cin >> num;
+    std::cout << "Enter an integer : " << '\n';
+    std::cin >> num;
 
     if( num % 2 == 0){
-        cout << num << " is even";
+        std::cout << num << " is even";
     }
     else{
-        cout << num << " is odd";
+        std::cout << num << " is odd";
     }
 }
 
@@ -1740,13 +1741,13 @@ int mult_table(){
     //code that generate a multiplication table for a given number
 
     int num;
-    cout << "Enter a number : " << '\n';
-    cin >> num;
-    cout << "multles of " << num << " Are" <<'\n';
+    std::cout << "Enter a number : " << '\n';
+    std::cin >> num;
+    std::cout << "multles of " << num << " Are" <<'\n';
 
     for(int i = 1; i < num ; ++i){
         int multiples_of = i*num;
-        cout << multiples_of << '\n';
+        std::cout << multiples_of << '\n';
     }
 
 }
@@ -1754,7 +1755,7 @@ int mult_table(){
 //                                                ***LECTURE 15***
 void prime_num(){
     //Write a program that let you input a an int and the output it should tell you wheter it is a a prime number or not
-    
+
 }
 
 
@@ -1763,10 +1764,10 @@ void telephone(){
    char alphabet;
 
    while(alphabet != '#'){
-            cout << "Enter a alphabet : " << '\n';
-            cin >> alphabet;
+            std::cout << "Enter a alphabet : " << '\n';
+            std::cin >> alphabet;
 
-        if(alphabet >= 'A' && alphabet <= 'Z'){
+        if((alphabet >= 'A'  && alphabet <= 'Z') &&  (alphabet >= 'a'&& alphabet <= 'z')){
             switch(alphabet){
                 case 'A':
                 case 'B':
@@ -1774,7 +1775,7 @@ void telephone(){
                 case 'a':
                 case 'b':
                 case 'c':
-                    cout << 1;
+                    std::cout << 1 << '\n';
                     break;
                 case 'D':
                 case 'E':
@@ -1782,7 +1783,7 @@ void telephone(){
                 case 'd':
                 case 'e':
                 case 'f':
-                    cout << 2;
+                    std::cout << 2<< '\n';
                     break;
                 case 'G':
                 case 'H':
@@ -1790,7 +1791,7 @@ void telephone(){
                 case 'g':
                 case 'h':
                 case 'i':
-                    cout << 3;
+                    std::cout << 3<< '\n';
                     break;
                 case 'J':
                 case 'K':
@@ -1798,7 +1799,7 @@ void telephone(){
                 case 'j':
                 case 'k':
                 case 'l':
-                    cout << 4;
+                    std::cout << 4<< '\n';
                     break;
                 case 'M':
                 case 'N':
@@ -1806,7 +1807,7 @@ void telephone(){
                 case 'm':
                 case 'n':
                 case 'o':
-                    cout << 5;
+                    std::cout << 5<< '\n';
                     break;
                 case 'P':
                 case 'Q':
@@ -1814,7 +1815,7 @@ void telephone(){
                 case 'p':
                 case 'q':
                 case 'r':
-                    cout << 6;
+                    std::cout << 6<< '\n';
                     break;
                 case 'S':
                 case 'T':
@@ -1822,7 +1823,7 @@ void telephone(){
                 case 's':
                 case 't':
                 case 'u':
-                    cout << 7;
+                    std::cout << 7<< '\n';
                     break;
                 case 'V':
                 case 'W':
@@ -1830,57 +1831,58 @@ void telephone(){
                 case 'v':
                 case 'w':
                 case 'x':
-                    cout << 8;
+                    std::cout << 8<< '\n';
                     break;
                 case 'Y':
                 case 'Z':
                 case 'y':
                 case 'z':
 
-                    cout << 9;
+                    std::cout << 9<< '\n';
                     break;
             }
 
         }
         else{
-            cout << "Invalid output ";
+            std::cout << "Invalid output ";
         }
 
 
    }
 }
 
+
 void fals_calculator(){
     //Write a program that mimics a calculater and displayes your equation and its unswer
     int num1, num2;
    char operatore ;
-   cout << "Enter first number : " << '\n';
-   cin >> num1;
-   cout << "Enter first number : " << '\n';
-   cin >> num2;
-   cout << "Enter operator you want to perfom eg. +,-,*,/,% : " << '\n';
-   cin >> operatore ;
+   std::cout << "Enter first number : " << '\n';
+   std::cin >> num1;
+   std::cout << "Enter first number : " << '\n';
+   std::cin >> num2;
+   std::cout << "Enter operator you want to perfom eg. +,-,*,/,% : " << '\n';
+   std::cin >> operatore ;
 
    if(operatore == '+'){
         int sum = num1 + num2;
-        cout << num1 << " " << "+ " << num2 << " = " << sum;
+        std::cout << num1 << " " << "+ " << num2 << " = " << sum;
    }
    else if(operatore == '-'){
         int diff = num1 - num2;
-        cout << num1 << " " << "- " << num2 << " = " << diff;
+        std::cout << num1 << " " << "- " << num2 << " = " << diff;
    }
    else if(operatore == '*'){
         int mult = num1 * num2;
-        cout << num1 << " " << "* " << num2 << " = " << mult;
+        std::cout << num1 << " " << "* " << num2 << " = " << mult;
    }
    else if(operatore == '/'){
         float div = double(num1) / double(num2);
-        cout << num1 << " " << "/ " << num2 << " = " << div;
+        std::cout << num1 << " " << "/ " << num2 << " = " << div;
    }
 
    else if(operatore == '%'){
         int mod = num1 % num2;
-        cout << num1 << " " << "% " << num2 << " = " << mod;
+        std::cout << num1 << " " << "% " << num2 << " = " << mod;
    }
 }
 
@@ -1889,31 +1891,31 @@ void coordinate_system(){
     //shoult then output a message indicating whether the point is origin,x or y axis, or aa quadrant
 
     int x, y;
-    cout << "Enter x value : " << '\n';
-    cin >> x;
-    cout << "Enter y value : " << '\n';
-    cin >> y;
+    std::cout << "Enter x value : " << '\n';
+    std::cin >> x;
+    std::cout << "Enter y value : " << '\n';
+    std::cin >> y;
 
     if(y == 0 && x > 0){
-        cout << "X-axis";
+        std::cout << "X-axis";
     }
     else if( x == 0 && y > 0){
-        cout << "Y-axis";
+        std::cout << "Y-axis";
     }
     else if( x == 0 && y == 0){
-        cout << "Origin";
+        std::cout << "Origin";
     }
     else if( x > 0 && y > 0){
-        cout << "First quadrant";
+        std::cout << "First quadrant";
     }
     else if( x < 0 && y > 0){
-        cout << "Second quadrant";
+        std::cout << "Second quadrant";
     }
     else if( x < 0 && y < 0){
-        cout << "Third quadrant";
+        std::cout << "Third quadrant";
     }
     else if( x > 0 && y < 0){
-        cout << "Fourth quadrant";
+        std::cout << "Fourth quadrant";
     }
 
 }
@@ -1932,42 +1934,42 @@ void service(){
     double min_bal_s = 100, min_bal_c = 200;
     char s_code;
 
-    cout << "Enter account number : " << '\n';
-    cin >> acc_num;
-    cout << "Enter service code s for saving and c for ceque " << '\n';
-    cin >> s_code;
-    cout << "Enter amout" << '\n';
-    cin >> balance;
+    std::cout << "Enter account number : " << '\n';
+    std::cin >> acc_num;
+    std::cout << "Enter service code s for saving and c for ceque " << '\n';
+    std::cin >> s_code;
+    std::cout << "Enter amout" << '\n';
+    std::cin >> balance;
 
     if(s_code == 's'){
         if(balance > min_bal_s){
             double intrest_r = balance*0.04;
             double new_ama = balance + intrest_r - 25;
-            cout << "Savings account : Your account should maintain minimum of R" << '\n';
-            cout << "current balance : " << 'R' << new_ama << '\n';
-            cout << "Thank you for using our service!!!";
+            std::cout << "Savings account : Your account should maintain minimum of R" << '\n';
+            std::cout << "current balance : " << 'R' << new_ama << '\n';
+            std::cout << "Thank you for using our service!!!";
         }
     else if(s_code == 'c'){
         if(balance > 3000 && balance > min_bal_c){
             double intrest_r = balance*0.05;
             double new_ama = balance + intrest_r - 35;
-            cout << "ceque account : Your account should maintain minimum of R25" << '\n';
-            cout << "current balance : " << 'R' << new_ama << '\n';
-            cout << "Thank you for using our service!!!";
+            std::cout << "ceque account : Your account should maintain minimum of R25" << '\n';
+            std::cout << "current balance : " << 'R' << new_ama << '\n';
+            std::cout << "Thank you for using our service!!!";
             }
         else if(balance > min_bal_c){
             double intrest_r = balance*0.06;
             double new_ama = balance + intrest_r - 35;
-            cout << "ceque account : Your account should maintain minimum of R25" << '\n';
-            cout << "current balance : " << 'R' << new_ama << '\n';
-            cout << "Thank you for using our service!!!";
+            std::cout << "ceque account : Your account should maintain minimum of R25" << '\n';
+            std::cout << "current balance : " << 'R' << new_ama << '\n';
+            std::cout << "Thank you for using our service!!!";
             }
 
     }
 
-    
-}
 
+}
+}
 
 
 int main(){
@@ -2006,6 +2008,7 @@ int main(){
     //range();
     //lecture_12_1();
     //largerst_numbers();
+    palindrome();
 
 
     return 0;

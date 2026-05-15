@@ -67,7 +67,6 @@ for (int i = 0; i <= 5 ; ++i){
 
 
 
-}
 
 void random(){
 
@@ -144,12 +143,49 @@ void cast(){
 
 }
 
+void volunteer(){
+
+    int num_v,num_s, sum;
+    std::string Name_v;
+    std::cout << "num_v : " << '\n';
+    std::cin >> num_v;
+
+    for(int i = 0; i < num_v; i++){
+        std::cout << "Name_v : " ;
+        std::cin >> Name_v;
+        std::cout << '\n';
+        std::cout << "Num_s : ";
+        std::cin >>num_s;
+        std::cout << '\n';
+        sum = sum + num_s;
+    }
+    std::cout << "Total sold : " << sum << '\n';
+    std::cout << "Total rev : " << sum*10 << '\n';
+
+}
+
+
+
 
 int main()
 {
 
-    authentication();
+    //authentication();
     //cast();
+    //telephone();
+    //volunteer();
+
+    std::string word = "cdfeccc";
+    char word_f = 'c';
+    int index = word.length();
+    int countt = 0;
+
+    for(int i = 0 ; i < index ; i++){
+        if(word_f == word[i]){
+            countt = countt + 1;
+        }
+    }
+    std::cout << countt;
 
     return 0;
 }
