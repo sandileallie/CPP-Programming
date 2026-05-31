@@ -368,16 +368,6 @@ void statement_if(){
 
  }
 
-void while_loop(){
-
-    int i= 0;
-    while( i < 5){
-        std::cout << "This is :" << i << "\n";
-        i++;
-    }
-
-}
-
 void find_value_array(){
 
     char roman_numeral[7] = {'M','D','L','C','X','V','L'};
@@ -482,6 +472,79 @@ void populate_array(){
     std::cout << num[3] << '\n';
 }
 
+void while_loop(){
+
+    int i = 1; //Counter variable: tells us how many times the loop will execute.
+    while(i <= 5){ // while(<parameter>): This will tell the loop will end when i > 5.
+            std::cout << i << '\n'; //Will print out first value of i which is 1 and so on up till 5.
+            i = i + 1; //This is the increment, will inciment the value of i by 1 and store it in our variable out side the loop and repeat the proccess up
+                       //until the condition is false
+    }
+
+    std::cout << '\n';
+
+    int i_2 = 1;                    //In this program first the compiler will increment the c variable by 1 and output the new value on the first line
+    while(i_2 <= 5){
+        i_2 = i_2 + 1;
+        std::cout << i_2 << '\n';
+    }
+
+    std::cout << '\n';
+
+    int x = 1;                  //This program will first execute the inner loop then increment y up till 6, output inner loop: 123456 .
+    int y = 1;                  //Then lastly it will execute the outer loop for the first time and print out the value of x on the same line
+    while( x <= 5){             //   as the inner loop and skip line. And execute the inner loop again, but already the c variable of the inner loop is >6
+        while( y <= 5){         //   therefor it wont execute. Againe execute the outer loop this time x is updated to 2 (incrementation), it will repear
+            std::cout << y;     //   this proccess up till c variable of the inner loop is >6 .
+            y = y + 1;
+        }
+        std::cout << x << '\n';
+        x = x + 1;
+    }
+
+    std::cout << '\n';
+
+    int x1 = 1;                  //
+    int y1 = 1;                  //
+    while( x1 <= 5){             //
+        while( y1 <= x1){        //
+            std::cout << y1;     //
+            y1 = y1 + 1;
+        }
+        std::cout << x1 << '\n';
+        x1 = x1 + 1;
+    }
+
+    std::cout << '\n';
+
+    int x2 = 1;                   //
+    int y2 = 1;                   //
+    while( x2 <= 5){              //
+        std::cout << x2 << '\n';  //
+        x2 = x2 + 1;              //
+        while( y2 <= x2){
+            std::cout << y2;
+            y2 = y2 + 1;
+        }
+    }
+
+    std::cout << '\n';
+
+    int x3 = 1;                   //
+    int y3 = 1;                   //
+    while( x3 <= 5){              //
+        std::cout << x3 << '\n';  //
+        while( y3 <= x3){
+            std::cout << y3;
+            y3 = y3 + 1;
+        }
+        x3 = x3 + 1;
+    }
+
+
+
+
+}
 
 
 
@@ -507,7 +570,8 @@ int main(){
 //roman_to_num();
 //iomanip();
 //arrays();
-populate_array();
+//populate_array();
+while_loop();
 
     return 0;
 }

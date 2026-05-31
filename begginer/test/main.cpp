@@ -164,16 +164,7 @@ void volunteer(){
 
 }
 
-
-
-
-int main()
-{
-
-    //authentication();
-    //cast();
-    //telephone();
-    //volunteer();
+void finde(){
 
     std::string word = "cdfeccc";
     char word_f = 'c';
@@ -186,6 +177,58 @@ int main()
         }
     }
     std::cout << countt;
+
+
+}
+
+void while_loop(){
+
+    int i = 0;
+    while(i < 5){
+        int j = 1;
+        while(j <=i){
+            std::cout << " ";
+            j = j + 1;
+        }
+        int k = 1;
+        while(k <= 5 - i){
+            std::cout << "* ";
+            k = k + 1;
+        }
+        std::cout <<'\n';
+        i = i + 1;
+
+    }
+
+}
+
+void test(){
+
+    int i = 1;
+    int k = 1;
+    while(i <= 5){
+        while(k <= i){
+            std::cout << k ;
+            k = k + 1;
+        }
+        std::cout << i << '\n';
+        i = i + 1;
+    }
+
+}
+
+
+
+int main()
+{
+
+    //authentication();
+    //cast();
+    //telephone();
+    //volunteer();
+    //while_loop();
+    test();
+    //while_loop();
 
     return 0;
 }
