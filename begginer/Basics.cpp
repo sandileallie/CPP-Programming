@@ -541,7 +541,57 @@ void while_loop(){
         x3 = x3 + 1;
     }
 
+    std::cout << '\n';
 
+    int a = 1;
+    while(a <= 5){
+        int b = 1;
+        while(b <= 5){
+            std::cout << b;
+            b = b + 1;
+        }
+        std::cout << a << '\n';
+        a = a + 1;
+    }
+
+    std::cout << '\n';
+
+    int a1 = 1;
+    while(a1 <= 5){
+        std::cout << a1 << '\n';
+        a1 = a1 + 1;
+        int b1 = 1;
+        while(b1 <= 5){
+            std::cout << b1;
+            b1 = b1 + 1;
+        }
+    }
+
+    std::cout << '\n';
+
+    int a2 = 1;
+    while(a2 <= 5){
+        int b2 = 1;
+        while(b2 <= a2){
+            std::cout << b2;
+            b2 = b2 + 1;
+        }
+        std::cout << a2 << '\n';
+        a2 = a2 + 1;
+    }
+
+    std::cout << '\n';
+
+    int a3 = 1;
+    while(a3 <= 5){
+        a3 = a3 + 1;
+        int b3 = 1;
+        while(b3 <= a3){
+            std::cout << b3;
+            b3 = b3 + 1;
+        }
+        std::cout << a3 << '\n';
+    }
 
 
 }

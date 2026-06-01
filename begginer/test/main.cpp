@@ -217,6 +217,100 @@ void test(){
 
 }
 
+void SNEH(){
+
+    int x = 1, y = 1 , x1 = 1, x2 = 1, x3 = 1, x4 = 1, y4 = 1, x5 = 1, y5 = 1, x6 = 1;
+    while(x <= 5){
+        while(y <= 5){
+            std::cout << "S";
+            y = y + 1;
+        }
+        std::cout << "S" << '\n';
+        x = x + 1;
+    }
+    while( x1 <= 5){
+        std::cout << "S";
+        x1 = x1 + 1;
+    }
+    while(x2 <= 5){
+        int y2 = 1;
+        while(y2 <=5){
+            std::cout << " ";
+            y2 = y2 + 1;
+        }
+        std::cout << "S" << '\n';
+        x2 = x2 + 1;
+    }
+    while( x3 <= 5){
+        std::cout << "S";
+        x3 = x3 + 1;
+    }
+
+    std::cout << '\n';
+    std::cout << '\n' ;
+
+    while(x4 <= 6){
+        while(y4 <= 5){
+            std::cout << "N";
+            y4 = y4 + 1;
+        }
+        std::cout << "N" << "    " << "N" << '\n';
+        x4 = x4 + 1;
+    }
+
+    std::cout << '\n';
+
+    while(x5 <= 6){
+        while(y5 <= 5){
+            std::cout << "E";
+            y5 = y5 + 1;
+        }
+        std::cout << "E" << '\n';
+        if(x5 == 3){
+            int w = 1;
+            while( w <= 5){
+                std::cout << "E";
+                w = w + 1;
+            }
+        }
+        x5 = x5 + 1;
+    }
+    while(x6 <= 6){
+        std::cout << "E";
+        x6 = x6 + 1;
+    }
+
+    std::cout << '\n';
+    std::cout << '\n';
+
+    int row = 1;
+    while (row <= 7) {
+        int col = 1;
+        while (col <= 5) {
+            if (col == 1 || col == 5 || row == 4) {
+                std::cout << "H";
+            }
+            else {
+                std::cout << " ";
+            }
+            col++;
+        }
+        std::cout << '\n';
+        row++;
+    }
+
+    int q = 1;
+    while( q <= 5){
+        std::cout << '\n';
+        q = q + 1;
+    }
+
+
+
+
+
+}
+
 
 
 int main()
@@ -227,8 +321,9 @@ int main()
     //telephone();
     //volunteer();
     //while_loop();
-    test();
+    //test();
     //while_loop();
+    SNEH();
 
     return 0;
 }
