@@ -305,10 +305,16 @@ void SNEH(){
         std::cout << '\n';
         q = q + 1;
     }
+}
 
+void referenc(){
 
+    int a = 5;
+    int &b = a;
+    int* point = &b;
 
-
+    std::cout << point - &a << '\n';
+    std::cout << &b;
 
 }
 
@@ -317,14 +323,8 @@ void SNEH(){
 int main()
 {
 
-    //authentication();
-    //cast();
-    //telephone();
-    //volunteer();
-    //while_loop();
-    //test();
-    //while_loop();
-    SNEH();
+
+    cout << static_cast<char>(toupper('$'));
 
     return 0;
 }
