@@ -318,13 +318,112 @@ void referenc(){
 
 }
 
+void ndudu(){
+
+    for(int x = 1; x <= 5; x++){
+        for(int y = 1; y <= 5; y++){
+            if(x == 1 ){
+                std::cout << "N";
+            }
+            else if(y == 2 || y == 3 || y == 4){
+            std::cout << " " ;
+            }
+            else{
+                std::cout << "N";
+            }
+        }
+
+        for(int y2 = 1; y2 <= 4; y2++){
+            if(x == 5){
+                std::cout << "N";
+            }
+            else if(y2 == 1 || y2 == 2 || y2 == 3 ){
+                std::cout << " ";
+            }
+            else{
+                std::cout << "N";
+            }
+        }
+        std::cout << "" << '\n';
+    }
+
+    std::cout << '\n';
+
+    for(int q = 1; q <= 6; q++){
+        for(int w = 1 ; w <= 9; w++){
+            if(q == 1 || q == 6){
+                std::cout << "D";
+            }
+            else if( w > 1 && w < 9){
+                std::cout << " ";
+            }
+            else{
+                std::cout << "D" << " ";
+            }
+        }
+        std::cout << "" << '\n';
+    }
+
+    std::cout << '\n';
+
+    for(int x = 1; x <= 5; x++){
+        for(int y = 1; y <= 9; y++){
+            if(x == 5){
+                std::cout << "U";
+            }
+            else if(y > 1 && y < 9){
+                std::cout << " ";
+            }
+            else{
+                std::cout << "U";
+            }
+        }
+        std::cout << "" << '\n';
+    }
+
+    std::cout << '\n';
+
+    for(int q = 1; q <= 6; q++){
+        for(int w = 1 ; w <= 9; w++){
+            if(q == 1 || q == 6){
+                std::cout << "D";
+            }
+            else if( w > 1 && w < 9){
+                std::cout << " ";
+            }
+            else{
+                std::cout << "D" << " ";
+            }
+        }
+        std::cout << "" << '\n';
+    }
+
+    std::cout << '\n';
+
+    for(int x = 1; x <= 5; x++){
+        for(int y = 1; y <= 9; y++){
+            if(x == 5){
+                std::cout << "U";
+            }
+            else if(y > 1 && y < 9){
+                std::cout << " ";
+            }
+            else{
+                std::cout << "U";
+            }
+        }
+        std::cout << "" << '\n';
+    }
+
+}
+
 
 
 int main()
 {
 
 
-    cout << static_cast<char>(toupper('$'));
+    ndudu();
 
     return 0;
 }
