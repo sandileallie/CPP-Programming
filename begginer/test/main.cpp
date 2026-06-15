@@ -417,13 +417,39 @@ void ndudu(){
 
 }
 
+void rent(){
 
+    const int t_units = 50;
+
+    double rent = 600, increase = 40, maint = 24;
+
+    double maxprof = 0;
+    int bocc = t_units;
+
+    for(int vac = 0; vac <= t_units; vac++){
+        int occ = t_units - vac;
+        double c_rent = rent + vac*increase;
+        double profit = occ*c_rent - occ*maint;
+
+        std::cout << profit;
+
+        if(profit > maxprof){
+            maxprof = profit;
+            bocc = occ;
+        }
+        std::cout << '\n';
+    }
+   // std::cout << maxprof <<'\n';
+   // std::cout << bocc;
+
+
+}
 
 int main()
 {
 
 
-    ndudu();
+    rent();
 
     return 0;
 }
