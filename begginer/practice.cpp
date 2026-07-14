@@ -1971,6 +1971,95 @@ void service(){
 }
 }
 
+//                                            ***Lecture 16***
+
+   // first word : welcome after 2 lines of stars
+    //              third line
+    //  Two rows of stars
+    //       Back like we
+    //         never left
+    // under neet 6th line
+    // last two rows of stars
+
+void star(){
+    for(int i = 1; i <= 9; i++){
+        for(int j = 0; j <= 14 ; j++){
+            cout << "*" ;
+            if( i == 1 || i == 2 || i == 4 || i == 5 || i == 8 || i == 9){
+                if(j == 14){
+                    cout << "************";
+                }
+            }
+            if(i == 3){
+                if(j == 7 ){
+                    cout << "Wolcome" ;
+                    cout << "*****";
+                }
+            }
+            else if( i == 6 ){
+                if( j == 6 ){
+                    cout << "Back like we";
+                }
+            }
+            else if( i == 7){
+                if( j == 7){
+                    cout << "Never left";
+                    cout << "**";
+                }
+            }
+        }
+        cout << "" << '\n';
+    }
+
+
+}
+
+// replacing printsatr with func:
+
+void func(){
+    int stars, lines;
+
+    for(lines = 1; lines <= 2; lines++){
+        for(stars = 1; stars <= 30; stars++){
+            cout << '*';
+        }
+        cout << '\n';
+    }
+
+}
+
+
+
+
+void printStars(int blanks, int starsInLine);
+int main()
+{
+    int line = 30;
+    int Count;
+    int blank = 30;
+
+    for(Count = 1; Count <= line; Count++){
+        printStars(blank,Count);
+        blank--;
+    }
+
+    return 0;
+}
+
+void printStars(int blanks, int starsInLine){
+
+    int count;
+    for(count = 1; count <= blanks; count++)
+        cout << " ";
+    for(count = 1; count <=starsInLine; count++)
+        cout << " *";
+    cout << '\n';
+
+}
+
+
+
+
 
 int main(){
 
