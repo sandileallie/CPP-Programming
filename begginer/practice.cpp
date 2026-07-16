@@ -2057,7 +2057,116 @@ void printStars(int blanks, int starsInLine){
 
 }
 
+//                                                ***LECTURE 17***
 
+void funcValuePara(int num);
+
+
+int main()
+{
+
+    int number =  6;
+
+    cout << "funcValuePara, number = " << number << '\n';
+
+    funcValuePara(number);
+
+    cout << "funcValuePara, number = " << number << '\n';
+
+    return 0;
+}
+
+void funcValuePara(int num){
+
+    cout << "Before changing, num = " << num<< '\n';
+
+    num = 15;
+
+    cout << "Afther cahnging, num = " << num << '\n';
+
+}
+
+
+void getScore(int& score);
+void printGrade(int score);
+ 
+int main()
+{
+    int courseScore;
+
+    getScore(courseScore);
+    printGrade(courseScore);
+
+    return 0;
+}
+
+void getScore(int &score){
+    cout << "Enter course score : ";
+    cin >> score;
+    cout << '\n';
+}
+
+void printGrade(int cScore){
+
+    cout << "Your grade for the course is ";
+
+    if(cScore >= 90){
+        cout << "A." << '\n';
+    }
+    else if(cScore >= 80){
+        cout << "B." << '\n';
+    }
+    else if(cScore >= 70){
+        cout << "C." << '\n';
+    }
+    else if(cScore >= 60){
+        cout << "D." << '\n';
+    }
+    else {
+        cout << "F." << '\n';
+    }
+}
+
+
+//Pass string by reff
+void modifyStr(string& Str, string& Str2);
+
+int main()
+{
+    string myStr = "My first string";
+    string myStr2 = "My second String";
+    modifyStr(myStr, myStr2);
+
+    cout << myStr << '\n' << myStr2;
+
+    return 0;
+}
+
+void modifyStr(string& Str, string& Str2){
+
+    Str = "Winter";
+    Str2 = "Solstice";
+
+}
+
+//Pass string by reff
+void modifyStr(string& Str);
+
+int main()
+{
+    string myStr = "My first string";
+    modifyStr(myStr);
+
+    cout << myStr ;
+
+    return 0;
+}
+
+void modifyStr(string& Str){
+
+    Str = "I love you";
+
+}
 
 
 
