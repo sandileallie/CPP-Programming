@@ -2168,6 +2168,180 @@ void modifyStr(string& Str){
 
 }
 
+//                                                ***Lecture 18***
+void NemaSim(double& Breath, double& Width); // Function prototype
+//NimaSim()
+//Has to prompt four and read two integers, values that represent the sides of a rectangle
+//and the area of the rectangle will be calculated produced, it containes two parameters, use value parameters
+	
+int main()
+{
+    double breath, width;
+    cout << "Enter rectangle breath : ";
+    cin >> breath;
+    cout << '\n';
+
+    cout << "Enter rectangle width : ";
+    cin >> width;
+    cout << '\n';
+
+    cout << "Area of rectangle is " ;
+
+    NemaSim(breath, width); // Function call
+
+    return 0;
+}
+
+
+void NemaSim(double& Breath, double& Width){
+
+        double Area = Breath * Width;
+        cout << Area;
+}
+
+
+
+void FuncSeven(int num1, int num2, char cha); // Value parameter
+void FuncEight(int& x ,int& y, char& cha); // Reference parameter
+
+/* Show how reference and value para works
+	
+	fun7(num1, num2, cha)
+		//output nums and cha 'ABVA1'
+	func8(num1, num2, cha)
+		//output x, y, 
+		
+	num1 num2 and char
+	
+	main Two numbers and a cha 'A'
+			//5 output num, */
+
+int main()
+{
+
+    int Num1 = 4;
+    int Num2 = 7;
+    char Cha = 'A';
+
+    cout << "Num1 : " << Num1 << " and " << "Num2 : " << Num2 << '\n' ;
+    cout << "char : " << Cha << '\n' ;
+    cout << '\n';
+
+    FuncSeven(Num1, Num2, Cha);
+    cout << '\n';
+    cout << "Num1 : " << Num1 << " and " << "Num2 : " << Num2 << '\n' ;
+    cout << "char : " << Cha << '\n' ;
+    cout << '\n';
+
+    FuncEight(Num1, Num2, Cha);
+    cout << '\n';
+    cout << "Num1 : " << Num1 << " and " << "Num2 : " << Num2 << '\n' ;
+    cout << "char : " << Cha << '\n' ;
+
+    return 0;
+}
+
+void FuncSeven(int num1, int num2, char cha){
+    num1 = 1;
+    num2 = 2;
+    cha = 'ABVA1';
+
+    cout << "num1 : " << num1 << " and " << "num2 : " << num2 << '\n' ;
+    cout << "char : " << cha << '\n' ;
+
+}
+
+void FuncEight(int& x, int& y, char& cha){
+    x = 6;
+    y = 9;
+
+    cout << "x : " << x << " and " << "y : " << y << '\n' ;
+    cout << "char : " << cha << '\n' ;
+
+}
+
+
+void addFirst(int& first, int& second);
+void doubleFirst(int one, int two);
+void squareFirst(int& ref, int val);
+
+int main()
+{
+    int num = 5;
+    cout << "Inside main num = " << num << '\n';
+    addFirst(num, num);
+    cout << "Inside main after addFirst: " << "num = " << num << '\n';
+    doubleFirst(num, num);
+    cout << "Inside main after "<< "doubleFirst: num = " << num << '\n';
+    squareFirst(num, num);
+    cout << "Inside main after " << "squareFirst: num = " << num << '\n';
+
+
+    return 0;
+}
+
+void addFirst(int& first, int& second){
+    cout << "Inside addFirst: first = " << first << " second = " << second << '\n';
+    first = first + 2;
+    cout << "Inside addFirst: first = " << first << " second = " << second << '\n';
+    second = second * 2;
+    cout << "Inside addFirst: first = " << first << " second = " << second << '\n';
+}
+
+void doubleFirst(int one, int two){
+    cout << "Inside doubleFirst: one = " << one << ", two = " << two << '\n';
+    one = one * 2;
+    cout << "Inside doubleFirst: one = " << one << ", two = " << two << '\n';
+    two = two + 2;
+    cout << "Inside doubleFirst: one = " << one << ", two = " << two << '\n';
+}
+
+void squareFirst(int& ref, int val){
+    cout << "Inside squareFirst: ref = " << ref << ", val = " << val << '\n';
+    ref = ref * ref;
+    cout << "Inside squareFirst: ref = " << ref << ", val = " << val << '\n';
+    val = val + 2;
+    cout << "Inside squareFirst: ref = " << ref << ", val = " << val << '\n';
+}
+
+
+
+void duplicate(int& b);
+
+int main()
+{
+
+    int x = 25;
+    cout << "x before : " << x << '\n';
+
+    cout << "x after : " ;
+    duplicate(x);
+
+    return 0;
+}
+
+void duplicate(int& b){
+
+    b = b * 2;
+
+    cout << b << '\n';
+
+}
+
+
+
+int num = 1; //Global
+
+int main()
+{
+    cout << "Global " << num << '\n';
+
+    ::num = 2; //Local
+    cout << "Local " << ::num << '\n';
+
+    return 0;
+}
+
 
 
 int main(){
