@@ -2343,6 +2343,106 @@ int main()
 }
 
 
+//													***LECTURE 19***
+
+
+void SwapNum(int& a, int& b);
+
+int main()
+{
+    int a = 3;
+    int b = 4;
+
+    cout << "The value of a : " << a<< '\n';
+    cout << "The value of b : " << b<< '\n';
+    cout << '\n';
+
+    SwapNum(a, b); // fuynction call
+
+
+
+    return 0;
+}
+
+void SwapNum(int& a, int& b){
+
+    int z = 0;
+
+    z = a;
+    a = b;
+    b = z;
+
+    cout << "Now values of " << '\n';
+    cout << '\n';
+
+    cout << "The value of a : " << a<< '\n';
+    cout << "The value of b : " << b<< '\n';
+
+
+
+}
+
+
+
+
+int t;
+
+void globalVarOne(int& a);
+
+int main()
+{
+    t = 15;
+
+    cout << "In main: t = " << t << '\n';
+
+    globalVarOne(t);
+
+    cout << "In main after globalVarOne: t = " << t << '\n';
+
+    return 0;
+}
+
+void globalVarOne(int& a){
+
+    cout << "In globalVarOne: a = " << a << " and t = " << t << '\n';
+
+    a = a + 12;
+
+    cout << "In globalVarOne: a = " << a << " and t = " << t <<'\n';
+
+    t = t + 13;
+
+    cout << "In globalVarOne: a = " << a << " and t = " << t << '\n';
+
+}
+
+
+
+
+static int r = 0;
+
+void test();
+
+int main()
+{
+    int x ;
+    for(x = 1 ; x <= 5; x++){
+        test();
+    }
+    return 0;
+}
+
+void test(){
+    static  int r = 0;
+    int s = 10;
+
+    r = r + 2;
+    s = s + 1;
+
+    cout << "Test r = " << r << " and s = " << s << '\n';
+}
+
+
 
 int main(){
 
