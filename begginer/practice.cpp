@@ -2443,6 +2443,191 @@ void test(){
 }
 
 
+//												***Lecture 19***									
+
+void doCpp();
+
+int main()
+{
+    for(int i = 1; i <= 3; i++){
+        doCpp();
+    }
+    return 0;
+}
+
+void doCpp(){
+
+    static int x = 2;
+    x = x * 2;
+    cout << x << '\n';
+
+}
+
+
+void task(int first, int& second);
+
+int main()
+{
+    int num ;
+    num = 5;
+    task(24, num);
+    cout << num << '\n';
+
+    task(num, num);
+    cout << num << '\n';
+
+    task(num*num,num);
+    cout << num << '\n';
+
+    task(num+num,num);
+    cout << num << '\n' ;
+
+    return 0;
+}
+
+void task(int first, int& second){
+
+    int third;
+
+    third = first + second * second + 2;
+    first = second - first;
+    second = 2 * second;
+
+    cout << first << " " << " " << third << '\n' ;
+
+}
+
+
+
+int g_score = 100;
+
+void dispalyScore();
+
+int main()
+{
+    dispalyScore();
+    g_score = 150;
+    cout << "score in main: " << g_score << '\n';
+
+    return 0;
+}
+
+void dispalyScore(){
+
+
+    cout << "score in function: " << g_score << '\n';
+
+}
+
+
+int a = 17;
+
+int main()
+{
+   int a = 12;
+    cout << a << '\n';
+    cout << ::a;
+
+    return 0;
+}
+
+
+/*enum colours{silver, blue, yellow, red, green};
+   enum sports {baseball, football, hockey, soccer, volleyball};
+   sports popularSport, mySport; */
+
+
+//create an enum var and assign a value to it
+    enum Level{HIGH, MEDIUM, LOW};
+cout << myVar;
+
+
+
+enum level{
+    LOW = 1, MEDIUM, HIGH
+};
+
+int main()
+{ 
+
+    enum level myVar = MEDIUM;
+
+    switch(myVar){
+        case 1:
+            cout << "Low level ";
+            break;
+        case 2:
+            cout << "Medium level ";
+            break;
+        case 3:
+            cout << "High level ";
+            break;
+    }
+
+
+
+
+
+
+
+    return 0;
+}
+
+
+
+
+
+enum courses {ALGEBRA, BASIC, PASCAL, CPP, PHILOSOPHY, ANALYSIS,
+CHEMISTRY, HISTORY};
+courses registered;
+
+int main()
+{
+    char ch1, ch2;
+    cin >> ch1 >> ch2;
+
+    switch (ch1)
+    {
+    case 'a':
+    case 'A':
+        if (ch2 == 'l' || ch2 == 'L')
+        registered = ALGEBRA;
+        else
+            registered = ANALYSIS;
+            break;
+    case 'b':
+    case 'B':
+        registered = BASIC;
+        break;
+    case 'c':
+    case 'C':
+        if (ch2 == 'h' || ch2 == 'H')
+            registered = CHEMISTRY;
+        else
+            registered = CPP;
+        break;
+    case 'h':
+    case 'H':
+        registered = HISTORY;
+        break;
+    case 'p':
+    case 'P':
+        if (ch2 == 'a' || ch2 == 'A')
+            registered = PASCAL;
+        else
+            registered = PHILOSOPHY;
+            break;
+    default:
+        cout << "Illegal input." << endl;
+    }
+
+
+
+    return 0;
+}
+
+
+
 
 int main(){
 
