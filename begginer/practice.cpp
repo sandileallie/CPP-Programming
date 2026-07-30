@@ -2627,6 +2627,100 @@ int main()
 }
 
 
+//												***LECTURE 21***
+
+enum myDesign {ITALICS = 1, BOLD = 2, UNDERLINE = 4};
+
+int main()
+{
+    int myDesign = BOLD | UNDERLINE;
+
+    cout << myDesign;
+
+    return 0;
+}
+
+
+
+enum TrafficLight {RED, YELLOW , GREEN};
+
+int main()
+{
+
+    TrafficLight currentSignal = YELLOW;
+
+    switch(currentSignal){
+    case RED:
+        cout << "Stop";
+        break;
+    case YELLOW:
+        cout << "Caution";
+        break;
+    case GREEN:
+        cout << "Go";
+        break;
+    }
+
+    return 0;
+}
+
+
+enum status{pending, approved, rejected};
+
+int main()
+{
+    status currentStatus = status::approved;
+    cout << "Is the status approved, pendding or rejected : "<< '\n';
+    if(currentStatus == 0){
+        cout << "pending";
+    }
+    else if (currentStatus == 1){
+        cout << "approved";
+    }
+    else{
+        cout << "rejected";
+    }
+    return 0;
+}
+
+using namespace std;
+
+enum seasons {spring = 0, summer = 4, autumn = 8, winter = 12};
+enum week{Sunday = 1, Monday, Thuesday, Wednesday, Thursday, Friday};
+
+int main()
+{
+    week day = week::Monday;
+    cout << "Today is is day " << day;
+    return 0;
+}
+
+using namespace std;
+
+enum seasons {spring = 0, summer = 4, autumn = 8, winter = 12};
+enum week{Sunday = 1, Monday, Thuesday, Wednesday, Thursday, Friday};
+
+int main()
+{
+    seasons season = summer;
+    cout << "Summer " << season;
+    return 0;
+}
+
+
+using namespace std;
+
+enum suit {clubs = 0, diamonds = 10, hearts = 20, spades = 3};
+
+int main()
+{
+    suit chips = suit::hearts;
+
+    cout << sizeof(chips);
+
+    return 0;
+}
+
 
 
 int main(){
