@@ -2721,6 +2721,156 @@ int main()
     return 0;
 }
 
+//												***LECTURE 22***
+
+
+int main()
+{
+    string Name = "Karima";
+    string str1 = "Nationality";
+    string str2 = "Hellow there";
+    string str3;
+
+    //Write that shows string operation
+    // output
+    // no blanks
+    // char for escape char newline
+
+    cout << "Name = " << Name ;
+    cout << '\n';
+
+    cout << "str1[3] = " << str1[3];
+    cout  << '\n';
+
+    cout << "str2 = " << str2;
+    cout  << '\n';
+
+    cout << "Enter a string with no blanks :" ;
+    cin >> str1 ;
+    cout << '\n';
+
+    cout << "The string you have entered : " << str1 << '\n';
+
+    char cha;
+    cin.get(cha);
+    cout << '\n';
+
+    cout << "Enter a sentence : " ;
+    getline(cin, str3);
+    cout << '\n';
+    cout << "The sentence is : " << str3 << '\n';
+
+
+
+    return 0;
+}
+
+
+
+string firstName = "Madlanga";
+    string name = firstName + " Gegleyihlekisa";
+    string str = "The commission is in session.";
+
+    cout << firstName.length() << '\n';
+    cout << name.length() << '\n';
+    cout << str.length() << '\n';
+
+
+
+int main()
+{
+
+    string sentence = "Winter is not yet over.";
+    cout << sentence << '\n';
+    string str = "Nippy";
+    cout << str << '\n';
+
+    cout << sentence.find("is") << '\n';
+    cout << sentence.find("yet") << '\n';
+    cout << sentence.find('i') << '\n';
+    cout << sentence.find("str") << '\n';
+    cout << sentence.find("not") << '\n';
+    cout << sentence.find('e', 15) << '\n';
+    int position = sentence.find("over");
+    cout << "position : " << position ;
+
+
+    return 0;
+}
+
+
+enum direction {EAST,NORTH, WEST, SOUTH};
+
+int main()
+{
+    int dir;
+    cout << "Enter direction : " ;
+    cin >> dir;
+    direction Direction = static_cast<direction>(dir);
+    cout << "Direction : " << Direction;
+    return 0;
+}
+
+
+enum color {RED, GREEN, BLUE};
+
+int main()
+{
+    color myColor = color::GREEN;
+    cout << myColor;
+
+    return 0;
+}
+
+enum class Test {A, B};
+
+int main()
+{
+    Test myT = Test::A;
+    cout << myT ;
+
+    return 0;
+}
+
+
+enum  x {A = 3, B, C};
+
+int main()
+{
+    cout << "sum : " << static_cast<x>(A + B + C);
+
+    return 0;
+}
+
+
+using namespace std;
+
+void removeX(int& a);
+
+int main()
+{
+
+    for(int i = 1; i <= 3; i++){
+        static int x = 2;
+        removeX(x);
+    }
+
+    cout << '\n';
+
+
+    for(int i = 1; i <= 3; i++){
+        int x2 = 2;
+        removeX(x2);
+    }
+
+    return 0;
+}
+
+void removeX(int& a){
+    a = a * 2;
+    cout << a << '\n';
+}
+
 
 
 int main(){
