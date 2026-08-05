@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 // Enumaration type is a ordered set of values
 // Syntax for enumaration type
@@ -30,6 +31,19 @@ void enumForLoop(){
 
 }
 
+//This is an invalid code, cause you cant convert a String to an enum type because the are incopatable like an int data type.
+/*
+void userInput(){
+
+    std::string Colore;
+    std::cin >> Colore;
+
+    colors Mycolor = std::static_cast<colors>(Colore);
+
+    cout << "Mycolore = " << Colore;
+
+}
+*/
 
 
 int main(){
