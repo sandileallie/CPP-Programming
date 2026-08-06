@@ -2871,6 +2871,70 @@ void removeX(int& a){
     cout << a << '\n';
 }
 
+//													***LECTURE 22***
+
+int main()
+{
+    string str1, str2;
+    string sentence = "The final exams are coming soon.";
+    string str = "coming";
+
+    cout << sentence.substr(0,5) << '\n';
+    cout << sentence.substr(7,7) << '\n';
+    cout << sentence.substr(6,17) << '\n';
+    cout << sentence.substr(18,10) << '\n';
+    cout << sentence.substr(0,9) << '\n';
+    cout << sentence.substr(3,12) << '\n';
+    return 0;
+}
+
+int main()
+{
+    // Extract two characters of string geeks from index 3
+    //string  s = "Geeks";
+
+    string s = "Geeks";
+    cout << s.substr(3,4) << '\n';
+
+    return 0;
+}
+
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+
+    string s = "1234";
+
+    int sum = 0;
+
+    int n = s.length();
+    for(int i = 0; i < n; i++){
+        for(int x = 1; x <= n - i; x++){
+            int num2 = stoi(s.substr(i, x));
+            sum = sum + num2;
+
+        }
+    }
+    cout << sum;
+
+
+
+    return 0;
+}
+
+// write a program that will print all non-empty substrings of that given string
+// string s = "abcd"
+
+//print out the sum of all substrings of a string representing a number
+
+
+
+
 
 
 int main(){
